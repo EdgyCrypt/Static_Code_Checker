@@ -4,6 +4,10 @@ EdgyCrypt in a E-learning tool ment to provide knowledge and test students on mu
 
 ## Getting up and Running with Node and NPM
 
+Node can be downloaded [here](https://nodejs.org/en/) on Windows, MacOS or Linux Operating Systems
+
+NPM (Node Package Manager) is installed along side node, if asked to upgrade please run the following command as sudo | administrator `npm install -g npm`
+
 ```Bash
 cd <repo_location>
 npm install
