@@ -1,4 +1,4 @@
-# EdgeCrypt
+# EdgyCrypt
 
 ## PROJECT CHARTER
 
