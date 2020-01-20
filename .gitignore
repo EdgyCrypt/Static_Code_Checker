@@ -105,3 +105,4 @@ dist
 
 # Vs project information
 .vscode
+.DS_Store
