@@ -1,11 +1,10 @@
-# EdgyCrypt
+# Static_Code_Checker (aka Nick hate's this idea)
 
 ## PROJECT CHARTER
 
+Static_Code_Checker is a system used to help students check their own code and professors to grade a system. It takes input, output and an excutable file and compares the two outputs. 
 
 ### ABSTRACT
-
-EdgyCrypt in a E-learning tool ment to provide knowledge and test students on multiple different kinds of encryption algorithms. The goal is to cover everything from the very basic Cesar Cypher all the way up to the RSA Cypher. We aim to provide a history of the cypher, along with mathematical and programable <someone fix this> solutions demonstrating the algorithm
 
 
 Authors:
@@ -36,23 +35,17 @@ Authors:
 
 ### 1. Project Summary
 
-<
-    
-    Define in 4-5 sentences the goal of this project that can be understood by all audiences. Ensure it is understandable by all audiences and stakeholders. How will this project be different from any similar systems?
-    Example: In current society, there is a high demand for Science, Technology, Engineering and Mathematics (STEM) specialists, especially Computer Scientists. To meet this need, there is a current demand in the education world for tools to teach basic programming concepts and logical reasoning in a way that engages students, maintains their interest and provides positive reinforcement.
+Grading code is a very time-consuming task. We aim to make this easier for both students and professors alike. Students armed with an input and output file will be able to test their code against their professors expected outputs giving them the difference so they can correct prior to sumbition. For professors the application will be able to run and test students code and provided information on weither or not the inputs match.
 
-    Grading is based on clear and well-defined problem statement.
-
->
 
 ### Team
 
 | Name           | Primary Role | Secondary Role | Tertiary Role |
 |----------------|--------------|----------------|---------------|
-| Matt Brown     |              |                |               |
-| Will Fitzgerld |              |                |               |
-| Jake Gadaleta  |              |                |               |
-| Nick Hertzog   |              |                |               |
+| Matt Brown     |Designers     |                |               |
+| Will Fitzgerld |Commetator    |                |               |
+| Jake Gadaleta  |Supreme Leader|                |               |
+| Nick Hertzog   |Programmer    |                |               |
 
 ### Scope
 
