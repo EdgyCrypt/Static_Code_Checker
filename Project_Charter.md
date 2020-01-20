@@ -5,7 +5,7 @@
 
 ### ABSTRACT
 
-EdgyCrypt in a E-learning tool ment to provide knowledge and test students on multiple different kinds of encryption algorithms. The goal is to cover everything from the very basic Cesar Cipher all the way up to the RSA Cypher. We aim to provide a history of the cypher, along with mathematical and programable <someone fix this> solutions demonstrating the algorithm
+EdgyCrypt in a E-learning tool ment to provide knowledge and test students on multiple different kinds of encryption algorithms. The goal is to cover everything from the very basic Cesar Cypher all the way up to the RSA Cypher. We aim to provide a history of the cypher, along with mathematical and programable <someone fix this> solutions demonstrating the algorithm
 
 
 Authors:
