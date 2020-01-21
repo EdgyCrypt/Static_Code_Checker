@@ -2,7 +2,7 @@
 
 ## PROJECT CHARTER
 
-Static_Code_Checker is a system used to help students check their own code and professors to grade a system. It takes input, output and an excutable file and compares the two outputs. 
+Static_Code_Checker is a system used to help students check their own code and professors to grade a system. It takes input, output and an executable file and compares the two outputs. 
 
 ### ABSTRACT
 
@@ -42,10 +42,10 @@ Grading code is a very time-consuming task. We aim to make this easier for both 
 
 | Name           | Primary Role | Secondary Role | Tertiary Role |
 |----------------|--------------|----------------|---------------|
-| Matt Brown     |Designers     |                |               |
-| Will Fitzgerld |Commenter     |                |               |
-| Jake Gadaleta  |Supreme Leader|                |               |
-| Nick Hertzog   |Programmer    |                |               |
+| Matt Brown     |Designers     |Programer       |               |
+| Will Fitzgerld |Commenter     |Dev Ops         |               |
+| Jake Gadaleta  |Supreme Leader|Dev Ops         |Programmer     |
+| Nick Hertzog   |Programmer    |Designers       |Dev Ops        |
 
 ### Scope
 
