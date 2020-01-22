@@ -17,3 +17,20 @@
 ## Git Kraken
 
 Git kraken is a Git enabled GUI with a wonderful path checking system to help everyone stay up to date, GitKraken can be found [here](https://www.gitkraken.com/)
+
+## Using Virtual Env
+
+A virtual environment will allow for us to keep the python version and packaging information separate from the python that sits on your system 
+
+### Activating your Virtual Env
+
+Windows:
+```bash
+env\bin\activate
+```
+
+MacOS and Linux:
+```bash
+source env/bin/activate
+```
+
