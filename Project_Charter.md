@@ -90,7 +90,7 @@ This product will not include
 
 ### Success Measurement
 
-Static_Code_Checker will measure its success by the complexation of a stable version of the application that can easily be opened by the most technologically illiterate people. Distributed with github and possibly hosted [PyPi](https://pypi.org/).
+Static_Code_Checker will measure its success by the complexation of a stable version of the application that can easily be opened by the most technologically illiterate people. Distributed with github and possibly hosted on [PyPi](https://pypi.org/).
 
 Another measurement would be a seal of approval by the DeSales University Computer Science Department
 
