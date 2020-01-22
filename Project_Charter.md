@@ -131,6 +131,6 @@ The signatures of the people below document approval of the formal Project Chart
 
 For user setup information please refer to the [README](README.md)
 
-For usage information please read [README2](README2.md)
+For usage information please read [User Guide](USER_GUIDE.md)
 
 For developer setup please refer to [DEV](DEV.md)
