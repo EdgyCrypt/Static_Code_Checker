@@ -33,15 +33,15 @@ Authors:
 
 ### Project Summary
 
-Grading code is a very time-consuming task. We aim to make this easier for both students and professors alike. Students armed with an input and output file will be able to test their code against their professors expected outputs giving them the difference so they can correct prior to submission. For professors the application will be able to run and test students code and provided information on whether or not the inputs match.
+Grading code is a very time-consuming task. We aim to make this easier for both students and professors alike. Students armed with an input and output file will test their code against their professors expected outputs giving them the difference so they can correct prior to submission. For professors, the application will run and test a student's code and provided information on whether or not the inputs match.
 
 
 ### Team
 
 | Name           | Primary Role | Secondary Role | Tertiary Role |
 |----------------|--------------|----------------|---------------|
-| Matt Brown     |Designer      |Programer       |               |
-| Will Fitzgerld |Commenter     |Dev Ops         |Programer      |
+| Matt Brown     |Designer      |Programmer      |               |
+| Will Fitzgerld |Commenter     |Dev Ops         |Programmer     |
 | Jake Gadaleta  |Supreme Leader|Dev Ops         |Programmer     |
 | Nick Hertzog   |Programmer    |Designer        |Dev Ops        |
 
