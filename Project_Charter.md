@@ -15,11 +15,11 @@ Authors:
 
 #### [Contents](###Contents)
 
-1. [Project Summary](###Project)
+1. [Project Summary](###Project%20Summary)
 2. [Team](###Team)
 3. [Scope](###Scope)
 
-    3.1. [Goals and Objectives](####Goals)
+    3.1. [Goals and Objectives](####Goals%20and%20Objectives)
 
     3.2. [Deliverables](####Deliverables)
 
@@ -27,15 +27,13 @@ Authors:
 
     3.4. [Out-Of-Scope](####Out-Of-Scope)
 
-    3.5. [Risks, Constraints, Assumptions](####Risks)
-
-4. [Success Measurement](###Success)
+4. [Success Measurement](###Success%20Measurement)
 5. [Signatures](###Signatures)
-6. [Appendix A - Glossary](###Appendix)
+6. [Appendix A - Glossary](###Appendix%20A)
 
-### 1. Project Summary
+### Project Summary
 
-Grading code is a very time-consuming task. We aim to make this easier for both students and professors alike. Students armed with an input and output file will be able to test their code against their professors expected outputs giving them the difference so they can correct prior to submission. For professors the application will be able to run and test students code and provided information on weither or not the inputs match.
+Grading code is a very time-consuming task. We aim to make this easier for both students and professors alike. Students armed with an input and output file will be able to test their code against their professors expected outputs giving them the difference so they can correct prior to submission. For professors the application will be able to run and test students code and provided information on weither <FIX> or not the inputs match.
 
 
 ### Team
@@ -43,7 +41,7 @@ Grading code is a very time-consuming task. We aim to make this easier for both 
 | Name           | Primary Role | Secondary Role | Tertiary Role |
 |----------------|--------------|----------------|---------------|
 | Matt Brown     |Designers     |Programer       |               |
-| Will Fitzgerld |Commenter     |Dev Ops         |               |
+| Will Fitzgerld |Commenter     |Dev Ops         |Programer      |
 | Jake Gadaleta  |Supreme Leader|Dev Ops         |Programmer     |
 | Nick Hertzog   |Programmer    |Designers       |Dev Ops        |
 
@@ -85,12 +83,12 @@ This product will not include
 
 | Risk/Constraint/Assumption Title | Explanation |
 |-------------------------------------------------------|------------------------------------------------------------------------|
-| not support Code completion for any available programing language  | It's expensive and unreasonable for a 3 month long project             |
-|  not support Code Linting or Control                               | We aim to edit raw text, this is not an IDE and should not be treated as such|
-| This is NOT a web app                                 | Generates security flaws as users will be able to pass commands into the server |
+| no support for Code completion for any available programing language  | It's expensive and unreasonable for a 3 month long project             |
+|  no support Code Linting or Control                               | We aim to edit raw text, this is not an IDE and should not be treated as such|
+| This is NOT a web app                                 | the application can result in security flaws as users will be able to pass commands into the system |
 | This application will not have all the answers        | This is not the be-all end all in coding education it is mearly <FIX> a tool|
 
-#### Success Measurements
+### Success Measurement
 
 <
 
