@@ -58,4 +58,4 @@ cd <path>/Static_Code_Checker
 <python command> TBD
 ```
 
-Then go to this [site](http://localhost:8080/)
+Then go to this [site](http://localhost:8080/) (http://localhost:8080/)
