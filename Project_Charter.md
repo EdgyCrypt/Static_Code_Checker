@@ -33,17 +33,17 @@ Authors:
 
 ### Project Summary
 
-Grading code is a very time-consuming task. We aim to make this easier for both students and professors alike. Students armed with an input and output file will be able to test their code against their professors expected outputs giving them the difference so they can correct prior to submission. For professors the application will be able to run and test students code and provided information on weither <FIX> or not the inputs match.
+Grading code is a very time-consuming task. We aim to make this easier for both students and professors alike. Students armed with an input and output file will be able to test their code against their professors expected outputs giving them the difference so they can correct prior to submission. For professors the application will be able to run and test students code and provided information on whether or not the inputs match.
 
 
 ### Team
 
 | Name           | Primary Role | Secondary Role | Tertiary Role |
 |----------------|--------------|----------------|---------------|
-| Matt Brown     |Designers     |Programer       |               |
+| Matt Brown     |Designer      |Programer       |               |
 | Will Fitzgerld |Commenter     |Dev Ops         |Programer      |
 | Jake Gadaleta  |Supreme Leader|Dev Ops         |Programmer     |
-| Nick Hertzog   |Programmer    |Designers       |Dev Ops        |
+| Nick Hertzog   |Programmer    |Designer        |Dev Ops        |
 
 ### Scope
 
@@ -85,8 +85,8 @@ This product will not include
 |-------------------------------------------------------|------------------------------------------------------------------------|
 | no support for Code completion for any available programing language  | It's expensive and unreasonable for a 3 month long project             |
 |  no support Code Linting or Control                               | We aim to edit raw text, this is not an IDE and should not be treated as such|
-| This is NOT a web app                                 | the application can result in security flaws as users will be able to pass commands into the system |
-| This application will not have all the answers        | This is not the be-all end all in coding education it is mearly <FIX> a tool|
+| This is NOT a web app                                 | The application can result in security flaws as users will be able to pass commands into the system |
+| This application will not have all the answers        | This is not the be-all end all in coding education it is mearly a tool|
 
 ### Success Measurement
 
