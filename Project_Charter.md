@@ -49,6 +49,11 @@ Grading code is a very time-consuming task. We aim to make this easier for both 
 
 ### Scope
 
+This product will include
+
+-  
+
+
 <
     Specify what will and will not be included in the project, including end products, who they affect, and how they will be introduced. 
     
