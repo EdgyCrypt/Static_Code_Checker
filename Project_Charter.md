@@ -90,11 +90,9 @@ This product will not include
 
 ### Success Measurement
 
-<
+Static_Code_Checker will measure its success by the complexation of a stable version of the application that can easily be opened by the most technologically illiterate people. Distributed with github and possibly hosted [PyPi](https://pypi.org/).
 
-    Identify metric and target you are trying to achieve as a result of this project.  For example, overall cost savings of $50K or reduce processing time by 25 percent. This can be in comparison to other systems available that are similar to the one you are developing.
-
->
+Another measurement would be a seal of approval by the DeSales University Computer Science Department
 
 ### Signatures
 
@@ -132,5 +130,7 @@ The signatures of the people below document approval of the formal Project Chart
 ### Additional Notes
 
 For user setup information please refer to the [README](README.md)
+
+For usage information please read [README2](README2.md)
 
 For developer setup please refer to [DEV](DEV.md)
