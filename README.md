@@ -3,7 +3,7 @@
 ## Requirement
 
 - [Python 3.7](https://www.python.org/downloads/release/python-375/)
-    - As of Jan 22 2020 we are still treating Python 3.8 as unsafe
+    - As of Jan 22 2020 we are still treating Python 3.8 as "unsafe"
 - Pip ("Pip installs Packages / Python")
 
 ## Getting Pip
