@@ -35,7 +35,7 @@ Authors:
 
 ### 1. Project Summary
 
-Grading code is a very time-consuming task. We aim to make this easier for both students and professors alike. Students armed with an input and output file will be able to test their code against their professors expected outputs giving them the difference so they can correct prior to sumbition. For professors the application will be able to run and test students code and provided information on weither or not the inputs match.
+Grading code is a very time-consuming task. We aim to make this easier for both students and professors alike. Students armed with an input and output file will be able to test their code against their professors expected outputs giving them the difference so they can correct prior to submission. For professors the application will be able to run and test students code and provided information on weither or not the inputs match.
 
 
 ### Team
@@ -49,67 +49,46 @@ Grading code is a very time-consuming task. We aim to make this easier for both 
 
 ### Scope
 
-This product will include
 
--  
-
-
-<
-    Specify what will and will not be included in the project, including end products, who they affect, and how they will be introduced. 
-    
->
 
 #### Goals and Objectives
 
-<
+This product will include
 
--	Clear and well-define list of project objectives.
--	Use a bulleted list (NO PARAGRAPHS)
--	List specific objectives. Example: Create required webs services and database for the application.
--	Grading is based on clear and well-defined list of objectives, do not use stories. 
+- A grading system
+- The ability for students to edit code in the app
+- Editable input files that feed input to the users
+- Editable output files that check outputs against 
+- Code compellation of the Java Programing Language
+- Code compellation of the Python (c) Programming Language
 
-
->
 
 
 #### Deliverables
 
-<
-
-- Identify the tangible items delivered by this project (e.g., requirements, new software modules, business process changes, training), organized logically, such as in functional terms and/or by project phase/calendar. 
-- Mention any platforms and/or frameworks which you plan to use.
-- Example: web-based front-end app, desktop application. Provide details (Bulleted list, sub-list)
-- Grading is based on well-defined deliverables described in details.
-
-
->
+- All listed functions as either
+    - an easy to run executable file
+    - a pip install-able package
 
 #### Stakeholders
-{
 
-•	Identify individuals and departments with a strategic or tactical interest in the project.
-•	Grading is based on completeness of this table.
-
-
-}
 
 | Role | Interest / Impact |
 |------|--------------------|
-|      |                    |
+| Students      | To test their code against those of their professors                   |
+| Professors    | Test and auto grade assignments from students                          |
+| Interviewees  | Quickly compare answers to given questions with no IDE support         |
 
 #### Out-Of-Scope
 
-<
-
-- Outline explicitly those items not included in the project (e.g., features of a tool not being implemented, or departments/user groups removed from a process as part of a change).
-- Mention the reason for each item not being a part of this project. Example, time-constraint, optional feature, etc.
-- Use bulleted list.
-
->
+This product will not include
 
 | Risk/Constraint/Assumption Title | Explanation |
-|----------------------------------|-------------|
-|                                  |             |
+|-------------------------------------------------------|------------------------------------------------------------------------|
+|Code completion for any available programing language  | It's expensive and unreasonable for a 3 month long project             |
+| Code Linting or Control                               | We aim to edit raw text, this is not an IDE and should not be treated as such|
+| This is NOT a web app                                 | Generates security flaws as users will be able to pass commands into the server |
+| This application will not have all the answers        | This is not the be-all end all in coding education it is mearly <FIX> a tool|
 
 #### Success Measurements
 
