@@ -49,7 +49,7 @@ sudo dnf / yum install python3-pip
 ## Installing with Pip
 ``` bash
 cd <path>/Static_Code_Checker
-pip install -f requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Running The Application
