@@ -52,8 +52,10 @@ cd <path>/Static_Code_Checker
 pip install -f requirements.txt
 ```
 
-## Running
+## Running The Application
 ``` bash
 cd <path>/Static_Code_Checker
 <python command> TBD
 ```
+
+Then go to this [site](http://localhost:8080/)
