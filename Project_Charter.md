@@ -41,7 +41,7 @@ Grading code is a very time-consuming task. We aim to make this easier for both 
 | Name           | Primary Role | Secondary Role | Tertiary Role |
 |----------------|--------------|----------------|---------------|
 | Matt Brown     |Designer      |Programmer      |               |
-| Will Fitzgerld |Commenter     |Dev Ops         |Programmer     |
+| Will Fitzgerald|Commenter     |Dev Ops         |Programmer     |
 | Jake Gadaleta  |Supreme Leader|Dev Ops         |Programmer     |
 | Nick Hertzog   |Programmer    |Designer        |Dev Ops        |
 
