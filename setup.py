@@ -23,7 +23,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
     ],
-    packages=["SRC"],
+    packages=["Static_Code_Checker"],
     include_package_data=True,
     install_requires= [],
     entry_points={
