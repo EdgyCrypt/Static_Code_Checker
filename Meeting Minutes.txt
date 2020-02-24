@@ -1,0 +1,11 @@
+2/24/2020
+
+11:44 – Jake called meeting into order (pre-sprint meeting)
+11:44 – Discussed talking front/backend structures 
+11:45 – Will offers recycling information between pages (Frontend development)
+11:45 – Matt offers using flask assets for back end development
+11:45 – Nick mentions using bootstrap and jQuery to help 
+11:46 – Jake mentions using rust as a backup language for the backend
+11:46 – Online meetings will be called when discussions are needed
+11:47 – No changes have been made to spring log because it has not been created yet
+11:48 – Meeting has been adjourned
