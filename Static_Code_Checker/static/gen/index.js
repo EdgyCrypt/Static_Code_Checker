@@ -13,3 +13,5 @@
         window.location.href="Interviewee.html";
     }
 }
+
+alert('hi Jake')

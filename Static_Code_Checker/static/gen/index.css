@@ -1,0 +1,9 @@
+#mainHeader {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
