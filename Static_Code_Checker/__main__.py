@@ -8,13 +8,12 @@ from flask_assets import Environment, Bundle
 
 app = Flask(__name__) 
 
-index_js = Bundle('js/home.js', output='gen/index.js')
-index_css = Bundle('css/main.css', output='gen/index.css')
-
-
 assets = Environment(app)
-assets.register('index_js', index_js)
-assets.register('index_css', index_css)
+
+assets.register({
+    'index_js' : Bundle('js/home.js', output='gen/index.js'),
+    'index_css' : Bundle('css/main.css', output='gen/index.css')
+})
 
 @app.route('/') 
 def index(): 
