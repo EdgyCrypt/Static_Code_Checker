@@ -3,7 +3,7 @@
 # the correct interpreter is Python 3.7.X 64 bit (./env/bin/python)
 # if that is not an option call jake over
 
-from flask import Flask, render_template
+from flask import Flask, render_template, flash, redirect, session, url_for, request, g
 from flask_assets import Environment, Bundle
 
 app = Flask(__name__) 
