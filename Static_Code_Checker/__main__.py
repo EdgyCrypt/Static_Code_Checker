@@ -30,5 +30,4 @@ def interviewee():
 
 # main driver function 
 if __name__ == '__main__': 
-    app.run(debug = True) # use for debugging
-    # app,run() # for production
+    app.run(debug = True) # use for debugging set the bebug flag to false for production
