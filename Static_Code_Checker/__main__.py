@@ -12,7 +12,15 @@ assets = Environment(app)
 
 assets.register({
     'index_js' : Bundle('js/home.js', output='gen/index.js'),
-    'index_css' : Bundle('css/main.css', output='gen/index.css')
+    'index_css' : Bundle('css/main.css', output='gen/index.css'),
+    'student_js': Bundle(output = 'gen/student.js'),
+    'student_css': Bundle(output = 'gen/student.css'),
+    'teacher_js': Bundle(output = 'gen/teacher.js'),
+    'teacher_css': Bundle(output = 'gen/teacher.css'),
+    'interviewer_js': Bundle(output = 'gen/interviewer.js'),
+    'interviewer_css': Bundle(output = 'gen/interviewer.css'),
+    'interviewee_js': Bundle(output = 'gen/interviewee.js'),
+    'interviewee_css': Bundle(output = 'gen/interviewee.css'),
 })
 
 @app.route('/') 
