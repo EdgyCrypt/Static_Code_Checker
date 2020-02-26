@@ -3,16 +3,23 @@
     <head>
         <meta charset="utf-8">
         <title>Static Code Checker</title>
+
+        <script src="Home.js"></script>
     </head>
 
     <body>
-        <input type="button" id="teacherBtn">I am a teacher</input>
-        <br>
-        <input type="button" id="studentBtn">I am a student</input>
-        <br>
-        <input type="button" id="interviewerBtn">I am an interviewer</input>
-        <br>
-        <input type="button" id="intervieweeBtn">I am an interviewee</input>
+        <div>
+            <div class="center">
+                <h1 id="mainHeader">Static Code Checker</h1>
+            </div>
+            <button id="studentBtn" onclick="navigatePages(1)">I am a student</button>
+            <br>
+            <button id="teacherBtn" onclick="navigatePages(2)">I am a teacher</button>
+            <br>
+            <button id="interviewerBtn" onclick="navigatePages(3)">I am an interviewer</button>
+            <br>
+            <button id="intervieweeBtn" onclick="navigatePages(4)">I am an interviewee</button>
+        </div>
     </body>
 
 </html>
