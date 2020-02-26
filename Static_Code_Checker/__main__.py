@@ -16,7 +16,6 @@ assets = Environment(app)
 assets.register('index_js', index_js)
 assets.register('index_css', index_css)
 
-
 @app.route('/') 
 def index(): 
     return render_template('index.html')

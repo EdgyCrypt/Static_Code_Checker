@@ -1,0 +1,15 @@
+HTML - goes in Static_Code_Checker / Templates
+
+JS CSS - Appropriate folders in Static_Code_Checker / Static_Code_Checker
+
+In HTML to link assets please use the following Templates
+
+{% assets "index_js" %}
+<script type="text/javascript", src="{{ ASSET_URL }}"></script>
+{% endassets %}
+
+{% assets "index_css" %}
+<link rel="stylesheet" href="{{ ASSET_URL }}"/>
+{% endassets %}
+
+Note any new files must be refernced in __main__.py
