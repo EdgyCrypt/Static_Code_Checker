@@ -8,12 +8,26 @@ from flask_assets import Environment, Bundle
 
 app = Flask(__name__) 
 
-
-
 @app.route('/') 
 def index(): 
     return render_template('index.html')
-  
+
+@app.route('/student')
+def students():
+    return render_template('students.html')
+
+@app.route('/teacher')
+def teachers():
+    return render_template('teacher.html')
+
+@app.route('/interviewer')
+def interviewer():
+    return render_template('teacher.html')
+
+@app.route('/interviewee')
+def interviewee():
+    return render_template('interviewee.html')
+
 # main driver function 
 if __name__ == '__main__': 
     app.run(debug = True) # use for debugging
