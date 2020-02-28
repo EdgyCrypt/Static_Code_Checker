@@ -1,17 +1,15 @@
  function navigatePages(int) {
 
     if(int == 1) {
-        window.location.href="Student.html";
+        window.location.href="student";
     }
     else if (int == 2) {
-        window.location.href="Teacher.html";
+        window.location.href="teacher";
     }
     else if (int == 3) {
-        window.location.href="Interviewer.html";
+        window.location.href="interviewer";
     }
     else if (int == 4) {
-        window.location.href="Interviewee.html";
+        window.location.href="interviewee";
     }
 }
-
-alert('hi Jake')

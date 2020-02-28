@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Static Code Checker</title>
+        
+        {% assets "student_js" %}
+        <script type="text/javascript", src="{{ ASSET_URL }}"></script>
+        {% endassets %}
+
+        {% assets "student_css" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}"/>
+        {% endassets %}
+    </head>
+
+    <body>
+        <div>
+            <div class="center">
+                <h1 id="mainHeader">Student</h1>
+            </div>
+            <button id="studentInputBtn" onclick="">Input</button>
+            <br>
+            <button id="studentOutputBtn" onclick="">Output</button>
+            <br>
+            <button id="studentCodeBtn" onclick="">Code</button>
+            <br>
+            <textarea id="studentTextArea" rows="10" cols="150"></textarea>
+        </div>
+    </body>
+
+</html>
