@@ -34,4 +34,5 @@ def parseFile(file):
             else:
                 runs.append(temp)
                 temp = ''
-        
+    
+    return runs
