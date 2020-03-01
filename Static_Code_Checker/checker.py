@@ -10,7 +10,7 @@ def prepHTML(text: str, expression: bool ):
         return f'<div class="__r__"> {text} </div>'
 
 
-def compare(original_text: string, generated_text: string):
+def compare(original_text: str, generated_text: str):
     """
     Compares 2 strings and returns html to be served to the models
     original_text - The text from the example

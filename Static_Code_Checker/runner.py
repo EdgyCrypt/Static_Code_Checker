@@ -10,8 +10,8 @@ code_languages = {
     },
     'python' : {
         'file_extension': ['.py', '.pyc'],
-        'commands': ['python', 'python3'],
-        'function': run_code_general
+        'commands': ['python3', 'python'],
+        'function': run_code_python
     }
 }
 
@@ -65,3 +65,37 @@ def run_code_java(program, args: list, results: list):
         trial.append(compare(output, results[i]))
     
     return trial
+
+def run_code_python(program, args: list, results: list):
+    info = code_languages['python']
+    command = 0
+    trial = []
+
+    for i in info['commands']:
+        if subprocess.call([i]) == 0 and command == 0:
+            command = i
+        else:
+            continue
+    if not type(program, enumerate):
+        for arg in args:
+            commandLine = [command, program]
+
+            for arg in args[i]:
+                commandLine.append(arg)
+
+            output = subprocess.Popen(commandLine, stdout=subprocess.PIPE).communicate()[0]
+        
+            trial.append(compare(output, results[i]))
+    
+    else:
+        for script in program:
+            for arg in args:
+                commandLine = [command, script]
+
+                for arg in args[i]:
+                    commandLine.append(arg)
+
+                output = subprocess.Popen(commandLine, stdout=subprocess.PIPE).communicate()[0]
+                
+                if output != '':
+                    trial.append(compare(output, results[i]))
