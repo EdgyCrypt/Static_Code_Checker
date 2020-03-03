@@ -15,16 +15,23 @@
 
     <body>
         <div>
+            <!--These inputs are hidden from the ui and are used with the buttons to allow for the user to navigate through file explorer for inputs-->
+            <input id="studentInputFile" type="file" style="display:none;" />
+            <input id="studentOutputFile" type="file" style="display:none;" />
+            <input id="studentCodeFile" type="file" style="display:none;" />
+            
             <div class="center">
-                <h1 id="mainHeader">Student</h1>
+                <h1 id="studentHeader">Student</h1>
             </div>
-            <button id="studentInputBtn" onclick="">Input</button>
+            <button id="studentInputBtn" onclick="document.getElementById('studentInputFile').click();">Input</button>
             <br>
-            <button id="studentOutputBtn" onclick="">Output</button>
+            <button id="studentOutputBtn" onclick="document.getElementById('studentOutputFile').click();">Output</button>
             <br>
-            <button id="studentCodeBtn" onclick="">Code</button>
+            <button id="studentCodeBtn" onclick="document.getElementById('studentCodeFile').click();">Code</button>
             <br>
             <textarea id="studentTextArea" rows="10" cols="150"></textarea>
+            <br>
+            <button id="studentRunBtn" onclick="">Run</button>
         </div>
     </body>
 
