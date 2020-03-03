@@ -15,16 +15,21 @@
 
     <body>
         <div>
+            <!--These inputs are hidden from the ui and are used with the buttons to allow for the user to navigate through file explorer for inputs-->
+            <input id="interviewerInputFile" type="file" style="display:none;" />
+            <input id="interviewerOutputFile" type="file" style="display:none;" />
+            <input id="interviewerCodeFile" type="file" style="display:none;" />
+
             <div class="center">
-                <h1 id="mainHeader">Static Code Checker</h1>
+                <h1 id="interviewerHeader">Interviewer</h1>
             </div>
-            <button id="studentBtn" onclick="navigatePages(1)">I am a student</button>
+            <button id="interviewerInputBtn" onclick="document.getElementById('interviewerInputFile').click();">Input</button>
             <br>
-            <button id="teacherBtn" onclick="navigatePages(2)">I am a teacher</button>
+            <button id="interviewerOutputBtn" onclick="document.getElementById('interviewerOutputFile').click();">Output</button>
             <br>
-            <button id="interviewerBtn" onclick="navigatePages(3)">I am an interviewer</button>
+            <button id="interviewerCodeBtn" onclick="document.getElementById('interviewerCodeFile').click();">Code</button>
             <br>
-            <button id="intervieweeBtn" onclick="navigatePages(4)">I am an interviewee</button>
+            <button id="interviewerContBtn" onclick="">Continue</button>
         </div>
     </body>
 
