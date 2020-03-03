@@ -23,7 +23,7 @@ func compareStrings(original string, generated string) {
 
 	for i := 0; i < length; i++ {
 		if i < len(original) && i < len(generated) {
-
+			//hi
 		}
 
 	}
