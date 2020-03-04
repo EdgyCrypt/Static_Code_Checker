@@ -8,6 +8,9 @@
         <script type="text/javascript", src="{{ ASSET_URL }}"></script>
         {% endassets %}
 
+        {% assets "index_js" %}
+        <script type="text/javascript", src="{{ ASSET_URL }}"></script>
+        {% endassets %}
         {% assets "interviewer_css" %}
         <link rel="stylesheet" href="{{ ASSET_URL }}"/>
         {% endassets %}
@@ -29,7 +32,7 @@
             <br>
             <button id="interviewerCodeBtn" onclick="document.getElementById('interviewerCodeFile').click();">Code</button>
             <br>
-            <button id="interviewerContBtn" onclick="">Continue</button>
+            <button id="interviewerContBtn" onclick="navigatePages(4)">Continue</button>
         </div>
     </body>
 

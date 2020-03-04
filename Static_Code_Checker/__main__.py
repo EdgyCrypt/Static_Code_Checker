@@ -37,7 +37,7 @@ def teachers():
 
 @app.route('/interviewer')
 def interviewer():
-    return render_template('teacher.html')
+    return render_template('interviewer.html')
 
 @app.route('/interviewee')
 def interviewee():
