@@ -1,2 +1,2 @@
-pip install -r requirments.txt
+pip install -r .requirments.txt
 python Static_Code_Checker
