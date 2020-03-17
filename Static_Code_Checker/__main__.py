@@ -5,8 +5,11 @@
 
 from flask import Flask, render_template, flash, redirect, session, url_for, request, g
 from flask_assets import Environment, Bundle
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__) 
+Bootstrap(app)
+
 
 assets = Environment(app)
 
