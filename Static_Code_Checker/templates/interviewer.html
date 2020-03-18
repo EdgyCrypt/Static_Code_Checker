@@ -1,39 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Static Code Checker</title>
-        
-        {% assets "interviewer_js" %}
-        <script type="text/javascript", src="{{ ASSET_URL }}"></script>
-        {% endassets %}
 
-        {% assets "index_js" %}
-        <script type="text/javascript", src="{{ ASSET_URL }}"></script>
-        {% endassets %}
-        {% assets "interviewer_css" %}
-        <link rel="stylesheet" href="{{ ASSET_URL }}"/>
-        {% endassets %}
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Static Code Checker</title>
 
-    <body>
-        <div>
-            <!--These inputs are hidden from the ui and are used with the buttons to allow for the user to navigate through file explorer for inputs-->
-            <input id="interviewerInputFile" type="file" style="display:none;" />
-            <input id="interviewerOutputFile" type="file" style="display:none;" />
-            <input id="interviewerCodeFile" type="file" style="display:none;" />
+    {% assets "interviewer_js" %}
+    <script type="text/javascript" , src="{{ ASSET_URL }}"></script>
+    {% endassets %} {% assets "interviewer_css" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}" /> {% endassets %}
+</head>
 
-            <div class="center">
-                <h1 id="interviewerHeader">Interviewer</h1>
-            </div>
-            <button id="interviewerInputBtn" onclick="document.getElementById('interviewerInputFile').click();">Input</button>
-            <br>
-            <button id="interviewerOutputBtn" onclick="document.getElementById('interviewerOutputFile').click();">Output</button>
-            <br>
-            <button id="interviewerCodeBtn" onclick="document.getElementById('interviewerCodeFile').click();">Code</button>
-            <br>
-            <button id="interviewerContBtn" onclick="navigatePages(4)">Continue</button>
+<body>
+    <div>
+        <!--These inputs are hidden from the ui and are used with the buttons to allow for the user to navigate through file explorer for inputs-->
+        <input id="interviewerInputFile" type="file" style="display:none;" />
+        <input id="interviewerOutputFile" type="file" style="display:none;" />
+        <input id="interviewerCodeFile" type="file" style="display:none;" />
+
+        <div class="center">
+            <h1 id="interviewerHeader">Interviewer</h1>
         </div>
-    </body>
+        <button id="interviewerInputBtn" onclick="document.getElementById('interviewerInputFile').click();">Input</button>
+        <br>
+        <button id="interviewerOutputBtn" onclick="document.getElementById('interviewerOutputFile').click();">Output</button>
+        <br>
+        <button id="interviewerCodeBtn" onclick="document.getElementById('interviewerCodeFile').click();">Code</button>
+        <br>
+        <button id="interviewerContBtn" onclick="navigatePages(4)">Continue</button>
+    </div>
+</body>
 
 </html>

@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Static Code Checker</title>
-        
-        {% assets "student_js" %}
-        <script type="text/javascript", src="{{ ASSET_URL }}"></script>
-        {% endassets %}
 
-        {% assets "student_css" %}
-        <link rel="stylesheet" href="{{ ASSET_URL }}"/>
-        {% endassets %}
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Static Code Checker</title>
 
-    <body>
-        <div>
-            <!--These inputs are hidden from the ui and are used with the buttons to allow for the user to navigate through file explorer for inputs-->
-            <input id="studentInputFile" type="file" style="display:none;" />
-            <input id="studentOutputFile" type="file" style="display:none;" />
-            <input id="studentCodeFile" type="file" style="display:none;" />
-            
-            <div class="center">
-                <h1 id="studentHeader">Student</h1>
-            </div>
-            <button id="studentInputBtn" onclick="document.getElementById('studentInputFile').click();">Input</button>
-            <br>
-            <button id="studentOutputBtn" onclick="document.getElementById('studentOutputFile').click();">Output</button>
-            <br>
-            <button id="studentCodeBtn" onclick="document.getElementById('studentCodeFile').click();">Code</button>
-            <br>
-            <textarea id="studentTextArea" rows="10" cols="150"></textarea>
-            <br>
-            <button id="studentRunBtn" onclick="">Run</button>
+    {% assets "student_js" %}
+    <script type="text/javascript" , src="{{ ASSET_URL }}"></script>
+    {% endassets %} {% assets "student_css" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}" /> {% endassets %}
+</head>
+
+<body>
+    <div>
+        <!--These inputs are hidden from the ui and are used with the buttons to allow for the user to navigate through file explorer for inputs-->
+        <input id="studentInputFile" type="file" style="display:none;" />
+        <input id="studentOutputFile" type="file" style="display:none;" />
+        <input id="studentCodeFile" type="file" style="display:none;" />
+
+        <div class="center">
+            <h1 id="studentHeader">Student</h1>
         </div>
-    </body>
+        <button id="studentInputBtn" onclick="document.getElementById('studentInputFile').click();">Input</button>
+        <br>
+        <button id="studentOutputBtn" onclick="document.getElementById('studentOutputFile').click();">Output</button>
+        <br>
+        <button id="studentCodeBtn" onclick="document.getElementById('studentCodeFile').click();">Code</button>
+        <br>
+        <textarea id="studentTextArea" rows="10" cols="150"></textarea>
+        <br>
+        <button id="studentRunBtn" onclick="">Run</button>
+    </div>
+</body>
 
 </html>

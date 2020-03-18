@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Static Code Checker</title>
-        
-        {% assets "index_js" %}
-        <script type="text/javascript", src="{{ ASSET_URL }}"></script>
-        {% endassets %}
 
-        {% assets "index_css" %}
-        <link rel="stylesheet" href="{{ ASSET_URL }}"/>
-        {% endassets %}
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Static Code Checker</title>
 
-    <body>
-        <div>
-            <div class="center">
-                <h1 id="mainHeader">Static Code Checker</h1>
-            </div>
-            <div class="center">
-                <button id="studentBtn" class="mainBtn" onclick="navigatePages(1)">I am a student</button>
-                <br>
-                <button id="teacherBtn" class="mainBtn" onclick="navigatePages(2)">I am a teacher</button>
-                <br>
-                <button id="interviewerBtn" class="mainBtn" onclick="navigatePages(3)">I am an interviewer</button>
-                <br>
-                <!--<button id="intervieweeBtn" onclick="navigatePages(4)">I am an interviewee</button>-->
-            </div>
+    {% assets "index_js" %}
+    <script type="text/javascript" , src="{{ ASSET_URL }}"></script>
+    {% endassets %} {% assets "index_css" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}" /> {% endassets %}
+
+</head>
+
+<body>
+    <div>
+        <div class="center">
+            <h1 id="mainHeader">Static Code Checker</h1>
         </div>
-    </body>
+        <div class="center">
+            <button id="studentBtn" class="mainBtn" onclick="navigatePages(1)">I am a student</button>
+            <br>
+            <button id="teacherBtn" class="mainBtn" onclick="navigatePages(2)">I am a teacher</button>
+            <br>
+            <button id="interviewerBtn" class="mainBtn" onclick="navigatePages(3)">I am an interviewer</button>
+            <br>
+            <!--<button id="intervieweeBtn" onclick="navigatePages(4)">I am an interviewee</button>-->
+        </div>
+    </div>
+</body>
 
 </html>

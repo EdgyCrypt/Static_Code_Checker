@@ -9,8 +9,6 @@ from flask_bootstrap import Bootstrap
 
 app = Flask(__name__) 
 Bootstrap(app)
-
-
 assets = Environment(app)
 
 jQuery = 'js/jquery.js'
@@ -51,3 +49,4 @@ def interviewee():
 # main driver function 
 if __name__ == '__main__': 
     app.run() # change this flag when moving into production
+    

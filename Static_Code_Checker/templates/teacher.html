@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Static Code Checker</title>
-        
-        {% assets "teacher_js" %}
-        <script type="text/javascript", src="{{ ASSET_URL }}"></script>
-        {% endassets %}
 
-        {% assets "teacher_css" %}
-        <link rel="stylesheet" href="{{ ASSET_URL }}"/>
-        {% endassets %}
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>Static Code Checker</title>
 
-    <body>
-        <div>
-            <!--These inputs are hidden from the ui and are used with the buttons to allow for the user to navigate through file explorer for inputs-->
-            <input id="teacherInputFile" type="file" style="display:none;" />
-            <input id="teacherOutputFile" type="file" style="display:none;" />
-            <input id="teacherCodeFile" type="file" style="display:none;" />
-            
-            <div class="center">
-                <h1 id="teacherHeader">Teacher</h1>
-            </div>
-            <button id="teacherInputBtn" onclick="document.getElementById('teacherInputFile').click();">Input</button>
-            <br>
-            <button id="teacherOutputBtn" onclick="document.getElementById('teacherOutputFile').click();">Output</button>
-            <br>
-            <button id="teacherCodeBtn" onclick="document.getElementById('teacherCodeFile').click();">Code</button>
-            <br>
-            <textarea id="teacherTextArea" rows="10" cols="150"></textarea>
-            <br>
-            <button id="teachRunBtn" onclick="">Run</button>
+    {% assets "teacher_js" %}
+    <script type="text/javascript" , src="{{ ASSET_URL }}"></script>
+    {% endassets %} {% assets "teacher_css" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}" /> {% endassets %}
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body>
+    <div>
+        <!--These inputs are hidden from the ui and are used with the buttons to allow for the user to navigate through file explorer for inputs-->
+        <input id="teacherInputFile" type="file" style="display:none;" />
+        <input id="teacherOutputFile" type="file" style="display:none;" />
+        <input id="teacherCodeFile" type="file" style="display:none;" />
+
+        <div class="center">
+            <h1 id="teacherHeader">Teacher</h1>
         </div>
-    </body>
+        <button id="teacherInputBtn" onclick="document.getElementById('teacherInputFile').click();">Input</button>
+        <br>
+        <button id="teacherOutputBtn" onclick="document.getElementById('teacherOutputFile').click();">Output</button>
+        <br>
+        <button id="teacherCodeBtn" onclick="document.getElementById('teacherCodeFile').click();">Code</button>
+        <br>
+        <textarea id="teacherTextArea" rows="10" cols="150"></textarea>
+        <br>
+        <button id="teachRunBtn" onclick="">Run</button>
+    </div>
+</body>
 
 </html>
