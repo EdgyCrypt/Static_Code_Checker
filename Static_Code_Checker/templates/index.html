@@ -1,3 +1,4 @@
+{% extends "bootstrap/base.html" %} {% block doc %} {{super()}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +19,7 @@
             <h1 id="mainHeader">Static Code Checker</h1>
         </div>
         <div class="center">
-            <button id="studentBtn" class="mainBtn" onclick="navigatePages(1)">I am a student</button>
+            <button id="studentBtn" class="mainBtn row" onclick="navigatePages(1)">I am a student</button>
             <br>
             <button id="teacherBtn" class="mainBtn" onclick="navigatePages(2)">I am a teacher</button>
             <br>
@@ -30,3 +31,4 @@
 </body>
 
 </html>
+{% endblock %}

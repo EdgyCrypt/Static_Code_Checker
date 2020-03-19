@@ -11,18 +11,16 @@ app = Flask(__name__)
 Bootstrap(app)
 assets = Environment(app)
 
-jQuery = 'js/jquery.js'
-
 assets.register({
-    'index_js' : Bundle('js/home.js', jQuery , output='gen/index.js'),
+    'index_js' : Bundle('js/home.js', output='gen/index.js'),
     'index_css' : Bundle('css/main.css',  output='gen/index.css'),
-    'student_js': Bundle('js/student.js', jQuery, output = 'gen/student.js'),
+    'student_js': Bundle('js/student.js',  output = 'gen/student.js'),
     'student_css': Bundle('css/student.css',  output = 'gen/student.css'),
-    'teacher_js': Bundle('js/teacher.js', jQuery, output = 'gen/teacher.js'),
+    'teacher_js': Bundle('js/teacher.js',  output = 'gen/teacher.js'),
     'teacher_css': Bundle('css/teacher.css',  output = 'gen/teacher.css'),
-    'interviewer_js': Bundle('js/interviewer.js', jQuery, output = 'gen/interviewer.js'),
+    'interviewer_js': Bundle('js/interviewer.js',  output = 'gen/interviewer.js'),
     'interviewer_css': Bundle('css/interviewer.css',  output = 'gen/interviewer.css'),
-    'interviewee_js': Bundle('js/interviewee.js', jQuery, output = 'gen/interviewee.js'),
+    'interviewee_js': Bundle('js/interviewee.js',  output = 'gen/interviewee.js'),
     'interviewee_css': Bundle('css/interviewee.css',  output = 'gen/interviewee.css'),
 })
 
