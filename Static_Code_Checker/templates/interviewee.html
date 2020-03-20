@@ -19,12 +19,19 @@
 
         <div class="center">
             <h1 id="interviewerHeader">Interviewee</h1>
+            <hr />
         </div>
-        <button id="interviewerCodeBtn" onclick="document.getElementById('intervieweeCodeFile').click();">Code</button>
-        <br>
-        <textarea id="intervieweeTextArea" rows="10" cols="150"></textarea>
-        <br>
-        <button id="interviewerContBtn" onclick="">Continue</button>
+        <div class="center">
+            <div class="intervieweeCol">
+                <button id="intervieweeCodeBtn" class="intervieweeBtn" onclick="document.getElementById('intervieweeCodeFile').click();">Code</button>
+            </div>
+            <div>
+                <textarea id="intervieweeTextArea" class="intervieweeText" rows="20" cols="220"></textarea>
+            </div>
+            <div>
+                <button id="intervieweeRunBtn" onclick="">Run</button>
+            </div>
+        </div>
     </div>
 </body>
 

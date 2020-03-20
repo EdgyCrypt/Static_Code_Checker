@@ -12,3 +12,8 @@
     height: 50px;
     width:80%;
 }
+
+.homeCol {
+    display: inline-block;
+    width: 30%;
+}

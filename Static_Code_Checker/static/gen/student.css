@@ -1,0 +1,27 @@
+.center {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+
+#studentHeader {
+    text-align: center;
+}
+
+.studentCol {
+    display: inline-block;
+    width: 30%;
+}
+
+.studentBtn {
+    height:50px;
+    width: 70%;
+}
+
+.studentText {
+    margin-top: 2%;
+}
+
+.studentRunBtn {
+    padding-left: 20%;
+}

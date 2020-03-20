@@ -1,0 +1,23 @@
+.center {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+
+#interviewerHeader {
+    text-align: center;
+}
+
+.interviewerCol {
+    display: inline-block;
+    width: 30%;
+}
+
+.interviewerBtn {
+    height:50px;
+    width: 70%;
+}
+
+.interviewerContBtn {
+    padding-left: 20%;
+}

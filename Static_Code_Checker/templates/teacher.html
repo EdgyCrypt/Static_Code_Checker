@@ -27,16 +27,25 @@
 
         <div class="center">
             <h1 id="teacherHeader">Teacher</h1>
+            <hr />
         </div>
-        <button id="teacherInputBtn" onclick="document.getElementById('teacherInputFile').click();">Input</button>
-        <br>
-        <button id="teacherOutputBtn" onclick="document.getElementById('teacherOutputFile').click();">Output</button>
-        <br>
-        <button id="teacherCodeBtn" onclick="document.getElementById('teacherCodeFile').click();">Code</button>
-        <br>
-        <textarea id="teacherTextArea" rows="10" cols="150"></textarea>
-        <br>
-        <button id="teachRunBtn" onclick="">Run</button>
+        <div class="center">
+            <div class="teacherCol">
+                <button id="teacherInputBtn" class="teacherBtn" onclick="document.getElementById('teacherInputFile').click();">Input</button>
+            </div>
+            <div class="teacherCol">
+                <button id="teacherOutputBtn" class="teacherBtn" onclick="document.getElementById('teacherOutputFile').click();">Output</button>
+            </div>
+            <div class="teacherCol">
+                <button id="teacherCodeBtn" class="teacherBtn" onclick="document.getElementById('teacherCodeFile').click();">Code</button>
+            </div>
+            <div>
+                <textarea id="teacherTextArea" class="teacherText" rows="20" cols="220"></textarea>
+            </div>
+            <div>
+                <button id="teachRunBtn" onclick="">Run</button>
+            </div>
+        </div>
     </div>
 </body>
 

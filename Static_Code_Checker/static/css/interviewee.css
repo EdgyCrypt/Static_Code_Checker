@@ -1,0 +1,27 @@
+.center {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+
+#intervieweeHeader {
+    text-align: center;
+}
+
+.intervieweeCol {
+    display: inline-block;
+    width: 30%;
+}
+
+.intervieweeBtn {
+    height:50px;
+    width: 70%;
+}
+
+.intervieweeText {
+    margin-top: 2%;
+}
+
+.intervieweeRunBtn {
+    padding-left: 20%;
+}

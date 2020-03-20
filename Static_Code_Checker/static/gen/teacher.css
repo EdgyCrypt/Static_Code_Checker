@@ -1,0 +1,27 @@
+.center {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+
+#teacherHeader {
+    text-align: center;
+}
+
+.teacherCol {
+    display: inline-block;
+    width: 30%;
+}
+
+.teacherBtn {
+    height:50px;
+    width: 70%;
+}
+
+.teacherText {
+    margin-top: 2%;
+}
+
+.teacherRunBtn {
+    padding-left: 20%;
+}
