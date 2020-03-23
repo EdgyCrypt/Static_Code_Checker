@@ -1,20 +1,10 @@
 from os import system
 import subprocess
-from Static_Code_Checker.checker import compare
-
-code_languages = {
-    'java': {
-        'file_extension': ['.java', '.class'],
-        'commands': ['javac', 'java'],
-        'function': run_code_java
-    },
-    'python' : {
-        'file_extension': ['.py', '.pyc'],
-        'commands': ['python3', 'python'],
-        'function': run_code_python
-    }
-}
-
+try:
+    from comparer import compare
+except:
+    from Static_Code_Checker.comparer import compare
+    
 def run_code(program, in_file, out_file):
     for language in code_languages:
         for ext in language['file_extension']:
@@ -99,3 +89,16 @@ def run_code_python(program, args: list, results: list):
                 
                 if output != '':
                     trial.append(compare(output, results[i]))
+
+code_languages = {
+    'java': {
+        'file_extension': ['.java', '.class'],
+        'commands': ['javac', 'java'],
+        'function': run_code_java
+    },
+    'python' : {
+        'file_extension': ['.py', '.pyc'],
+        'commands': ['python3', 'python'],
+        'function': run_code_python
+    }
+}

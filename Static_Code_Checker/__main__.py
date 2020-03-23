@@ -7,9 +7,22 @@ from flask import Flask, render_template, flash, redirect, session, url_for, req
 from flask_assets import Environment, Bundle
 from flask_bootstrap import Bootstrap
 
+try:
+    from compiler import run_code # (program, in_file, out_file)
+except:
+    from Static_Code_Checker.compiler import run_code
+
+
 app = Flask(__name__) 
+"""Your Program Goes Here
+Applying JQuery and Bootstrap
+"""
 Bootstrap(app)
 assets = Environment(app)
+
+"""
+Staticing the css and JS
+"""
 
 assets.register({
     'index_js' : Bundle('js/home.js', output='gen/index.js'),
@@ -24,12 +37,34 @@ assets.register({
     'interviewee_css': Bundle('css/interviewee.css',  output = 'gen/interviewee.css'),
 })
 
+
+"""
+Routing:
+Building the sitemap
+"""
+
 @app.route('/') 
 def index(): 
     return render_template('index.html')
 
-@app.route('/student')
+@app.route('/student', methods=['GET', 'POST'])
 def students():
+    print(request.method)
+    if request.method == 'POST':
+        program = request.form['program']
+        print(program)
+        if program:
+            args = request.form['args']
+            output = request.form['output']
+            print(args)
+            print(output)
+            if not args:
+                args = ''
+            
+            if not output:
+                output = ''
+
+            print(run_code(program, args, output))
     return render_template('student.html')
 
 @app.route('/teacher')
@@ -43,6 +78,10 @@ def interviewer():
 @app.route('/interviewee')
 def interviewee():
     return render_template('interviewee.html')
+
+"""
+Adding the POST Functions
+"""
 
 # main driver function 
 if __name__ == '__main__': 

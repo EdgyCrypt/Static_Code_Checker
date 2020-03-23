@@ -15,31 +15,33 @@
 <body>
     <div>
         <!--These inputs are hidden from the ui and are used with the buttons to allow for the user to navigate through file explorer for inputs-->
-        <input id="studentInputFile" type="file" style="display:none;" />
-        <input id="studentOutputFile" type="file" style="display:none;" />
-        <input id="studentCodeFile" type="file" onchange="" style="display:none;" />
-
-        <div class="center">
-            <h1 id="studentHeader">Student</h1>
-            <hr />
-        </div>
-        <div class="center">
-            <div class="studentCol">
-                <button id="studentInputBtn" class="studentBtn" onclick="document.getElementById('studentInputFile').click();">Input</button>
+        <form action="{{ url_for('students') }}" method="POST">
+            <input id="studentInputFile" type="file" style="display:none;" name="args"/>
+            <input id="studentOutputFile" type="file" style="display:none;" name="output"/>
+            <input id="studentCodeFile" type="file" onchange="" style="display:none;" name="program"/>
+            
+            <div class="center">
+                <h1 id="studentHeader">Student</h1>
+                <hr />
             </div>
-            <div class="studentCol">
-                <button id="studentOutputBtn" class="studentBtn" onclick="document.getElementById('studentOutputFile').click();">Output</button>
+            <div class="center">
+                <div class="studentCol">
+                    <button id="studentInputBtn" class="studentBtn" onclick="document.getElementById('studentInputFile').click();">Input</button>
+                </div>
+                <div class="studentCol">
+                    <button id="studentOutputBtn" class="studentBtn" onclick="document.getElementById('studentOutputFile').click();">Output</button>
+                </div>
+                <div class="studentCol">
+                    <button id="studentCodeBtn" class="studentBtn" onclick="document.getElementById('studentCodeFile').click();">Code</button>
+                </div>
+                <div>
+                    <textarea id="studentTextArea" class="studentText" rows="20" cols="220"></textarea>
+                </div>
+                <div>
+                    <input id="studentRunBtn" type="submit" value='Run'>
+                </div>
             </div>
-            <div class="studentCol">
-                <button id="studentCodeBtn" class="studentBtn" onclick="document.getElementById('studentCodeFile').click();">Code</button>
-            </div>
-            <div>
-                <textarea id="studentTextArea" class="studentText" rows="20" cols="220"></textarea>
-            </div>
-            <div>
-                <button id="studentRunBtn" onclick="">Run</button>
-            </div>
-        </div>
+        </form>
     </div>
 </body>
 
