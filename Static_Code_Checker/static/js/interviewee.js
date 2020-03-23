@@ -1,5 +1,5 @@
 
-function populateTextFromFile {
+function populateTextFromFile () {
     var file = document.getElementById('intervieweeCodeFile').files[0];
 
     var reader = new FileReader();

@@ -1,5 +1,5 @@
 
-function populateTextFromFile {
+function populateTextFromFile () {
     var file = document.getElementById('studentCodeFile').files[0];
 
     var reader = new FileReader();
