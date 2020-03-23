@@ -51,8 +51,8 @@ def index():
 def students():
     print(request.method)
     if request.method == 'POST':
-        program = request.form['program']
-        print(program)
+        program = request.form['program']   
+        print(request.form)
         if program:
             args = request.form['args']
             output = request.form['output']
