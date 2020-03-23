@@ -46,5 +46,5 @@ def interviewee():
 
 # main driver function 
 if __name__ == '__main__': 
-    app.run() # change this flag when moving into production
+    app.run(debug=True) # change this flag when moving into production
     
