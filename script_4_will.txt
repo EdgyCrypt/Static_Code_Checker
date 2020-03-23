@@ -1,0 +1,20 @@
+[run project]
+Hi All, Will here,
+
+First a reminded or what this project is, we aim to make a code testing suite
+that allows users to upload and edit their own files, and test it against input files and output files
+
+[go through the teacher and interviewer pages]
+whats happened here in the front end was a little bit of remolding to make it look nicer moving forward we plan on picking and going with a solid color theme
+
+you may have noticed that I skipped the students page and thats because we have started linking the front and back ends there
+
+if we select files (there is one output and one java file in Project/Test Case/). We can hit run, now nothing happens here because we are still trying to hook everything together.
+
+If we switch over to the terminal we will see that we managed to get an object back from the webpage {POST ImmutableMultiDict([('args', ''), ('output', ''), ('program', '')])}
+
+There is some more stuff done in the back here [open the directory], here we have new runner scripts all these do is handle the different PyPi requirements and starts the scripts as well
+
+Going into the package we see a new compiler file, I will not open cause its large and confusing and quite honestly scares me a little, but it can compile down java and python code
+
+In the next week we want to keep working on syncing the front and back ends, and continue making the front look better
