@@ -16,19 +16,51 @@
 <body>
     <div>
         <div class="center">
-            <h1 id="mainHeader">Static Code Checker</h1>
-            <hr />
+            <div class="topBar">
+                <h1 id="mainHeader">Static Code Checker</h1>
+                
+            </div>
         </div>
         <div class="center">
-            <div class="homeCol">
-                <button id="studentBtn" class="mainBtn row" onclick="navigatePages(1)">I am a student</button>
+            <div class="homeBody">
+                <div class="btnCols">
+                    <div class="homeCol">
+                        <h1 class="btnHeader" style="width: 100%; display: inline-block; border-bottom: solid 2px black;">Students</h1>
+                        <div>
+                            <h3>You will need...</h4>
+                            <ul>
+                                <li>Input File</li>
+                                <li>Output File</li>
+                                <li>Code File</li>
+                            </ul>
+                        </div>
+                        <button id="studentBtn" class="mainBtn" onclick="navigatePages(1)">I am a student</button>
+                    </div>
+                    <div class="homeCol">
+                        <h1 class="btnHeader" style="width: 100%; display: inline-block; border-bottom: solid 2px black;">Teachers</h1>
+                        <div>
+                            <h3>You will need...</h4>
+                            <ul>
+                                <li>Input File</li>
+                                <li>Output File</li>
+                                <li>Code File</li>
+                            </ul>
+                        </div>
+                        <button id="teacherBtn" class="mainBtn" onclick="navigatePages(2)">I am a teacher</button>
+                    </div> 
+                    <div class="homeCol">
+                        <h1 class="btnHeader" style="width: 100%; display: inline-block; border-bottom: solid 2px black;">Interviewers</h1>
+                        <div>
+                            <h3>You will need...</h4>
+                            <ul>
+                                <li>Input File</li>
+                                <li>Output File</li>
+                            </ul>
+                        </div>
+                        <button id="interviewerBtn" class="mainBtn" onclick="navigatePages(3)">I am an interviewer</button>
+                    </div> 
+                </div>
             </div>
-            <div class="homeCol">
-                <button id="teacherBtn" class="mainBtn" onclick="navigatePages(2)">I am a teacher</button>
-            </div> 
-            <div class="homeCol">
-                <button id="interviewerBtn" class="mainBtn" onclick="navigatePages(3)">I am an interviewer</button>
-            </div> 
         </div>
     </div>
 </body>

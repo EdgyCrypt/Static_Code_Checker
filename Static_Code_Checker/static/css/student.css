@@ -6,6 +6,7 @@
 
 #studentHeader {
     text-align: center;
+    color: whitesmoke;
 }
 
 .studentCol {
@@ -16,12 +17,40 @@
 .studentBtn {
     height:50px;
     width: 70%;
+    border-radius: 8px;
+    background-color: #535354;
+    display: inline-block;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.topBar {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    background-color: #535354;
+    height: 80px;
+    border-bottom: solid 2px black;
+}
+
+.studentBody {
+    margin-top: 2%;
 }
 
 .studentText {
     margin-top: 2%;
 }
 
-.studentRunBtn {
-    padding-left: 20%;
+#studentRunBtn {
+    display: inline-block;
+    width: 15%;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #535354;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+body {
+    background-color: #f0ead6;
 }

@@ -21,24 +21,27 @@
             <input id="studentCodeFile" type="file" onchange="" style="display:none;" name="program"/>
             
             <div class="center">
-                <h1 id="studentHeader">Student</h1>
-                <hr />
+                <div class="topBar">
+                    <h1 id="studentHeader">Student</h1>
+                </div>
             </div>
             <div class="center">
-                <div class="studentCol">
-                    <button id="studentInputBtn" class="studentBtn" onclick="document.getElementById('studentInputFile').click();">Input</button>
-                </div>
-                <div class="studentCol">
-                    <button id="studentOutputBtn" class="studentBtn" onclick="document.getElementById('studentOutputFile').click();">Output</button>
-                </div>
-                <div class="studentCol">
-                    <button id="studentCodeBtn" class="studentBtn" onclick="document.getElementById('studentCodeFile').click();">Code</button>
-                </div>
-                <div>
-                    <textarea id="studentTextArea" class="studentText" rows="20" cols="220"></textarea>
-                </div>
-                <div>
-                    <input id="studentRunBtn" type="submit" value='Run'>
+                <div class="studentBody">
+                    <div class="studentCol">
+                        <button id="studentInputBtn" class="studentBtn" onclick="document.getElementById('studentInputFile').click();">Input</button>
+                    </div>
+                    <div class="studentCol">
+                        <button id="studentOutputBtn" class="studentBtn" onclick="document.getElementById('studentOutputFile').click();">Output</button>
+                    </div>
+                    <div class="studentCol">
+                        <button id="studentCodeBtn" class="studentBtn" onclick="document.getElementById('studentCodeFile').click();">Code</button>
+                    </div>
+                    <div>
+                        <textarea id="studentTextArea" class="studentText" rows="20" cols="220"></textarea>
+                    </div>
+                    <div>
+                        <input id="studentRunBtn" type="submit" value="Run">
+                    </div>
                 </div>
             </div>
         </form>

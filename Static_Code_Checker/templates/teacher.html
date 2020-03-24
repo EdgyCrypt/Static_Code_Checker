@@ -26,24 +26,27 @@
         <input id="teacherCodeFile" type="file" style="display:none;" />
 
         <div class="center">
-            <h1 id="teacherHeader">Teacher</h1>
-            <hr />
+            <div class="topBar">
+                <h1 id="teacherHeader">Teacher</h1>
+            </div>
         </div>
         <div class="center">
-            <div class="teacherCol">
-                <button id="teacherInputBtn" class="teacherBtn" onclick="document.getElementById('teacherInputFile').click();">Input</button>
-            </div>
-            <div class="teacherCol">
-                <button id="teacherOutputBtn" class="teacherBtn" onclick="document.getElementById('teacherOutputFile').click();">Output</button>
-            </div>
-            <div class="teacherCol">
-                <button id="teacherCodeBtn" class="teacherBtn" onclick="document.getElementById('teacherCodeFile').click();">Code</button>
-            </div>
-            <div>
-                <textarea id="teacherTextArea" class="teacherText" rows="20" cols="220"></textarea>
-            </div>
-            <div>
-                <button id="teachRunBtn" onclick="">Run</button>
+            <div class="teacherBody">
+                <div class="teacherCol">
+                    <button id="teacherInputBtn" class="teacherBtn" onclick="document.getElementById('teacherInputFile').click();">Input</button>
+                </div>
+                <div class="teacherCol">
+                    <button id="teacherOutputBtn" class="teacherBtn" onclick="document.getElementById('teacherOutputFile').click();">Output</button>
+                </div>
+                <div class="teacherCol">
+                    <button id="teacherCodeBtn" class="teacherBtn" onclick="document.getElementById('teacherCodeFile').click();">Code</button>
+                </div>
+                <div>
+                    <textarea id="teacherTextArea" class="teacherText" rows="20" cols="220"></textarea>
+                </div>
+                <div>
+                    <button id="teachRunBtn" onclick="">Run</button>
+                </div>
             </div>
         </div>
     </div>

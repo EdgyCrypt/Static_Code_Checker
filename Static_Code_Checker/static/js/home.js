@@ -12,4 +12,7 @@
     else if (int == 4) {
         window.location.href="/interviewee";
     }
+    else if (int == 5) {
+        window.location.href="/index";
+    }
 }
