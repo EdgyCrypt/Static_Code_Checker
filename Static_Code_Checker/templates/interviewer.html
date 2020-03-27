@@ -20,22 +20,21 @@
         <input id="interviewerCodeFile" type="file" style="display:none;" />
 
         <div class="center">
-            <h1 id="interviewerHeader">Interviewer</h1>
-            <hr />
+            <div class="topBar">
+                <h1 id="interviewerHeader">Interviewer</h1>
+            </div>
         </div>
         <div class="center">
-            <div class="interviewerCol">
-                <button id="interviewerInputBtn" class="interviewerBtn" onclick="document.getElementById('interviewerInputFile').click();">Input</button>
-            </div>
-            <div class="interviewerCol">
-                <button id="interviewerOutputBtn" class="interviewerBtn" onclick="document.getElementById('interviewerOutputFile').click();">Output</button>
-            </div>
-            <div class="interviewerCol">
-                <button id="interviewerCodeBtn" class="interviewerBtn" onclick="document.getElementById('interviewerCodeFile').click();">Code</button>
-            </div>
-            <br />
-            <div>
-                <button id="interviewerContBtn" onclick="navigatePages(4)">Continue</button>
+            <div class="interviewerBody">
+                <div class="interviewerCol">
+                    <button id="interviewerInputBtn" class="interviewerBtn" onclick="document.getElementById('interviewerInputFile').click();">Input</button>
+                </div>
+                <div class="interviewerCol">
+                    <button id="interviewerOutputBtn" class="interviewerBtn" onclick="document.getElementById('interviewerOutputFile').click();">Output</button>
+                </div>
+                <div style="margin-top: 2%;">
+                    <button id="interviewerContBtn" onclick="navigatePages(4)">Continue</button>
+                </div>
             </div>
         </div>
     </div>

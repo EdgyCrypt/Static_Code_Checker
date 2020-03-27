@@ -6,6 +6,7 @@
 
 #interviewerHeader {
     text-align: center;
+    color: whitesmoke;
 }
 
 .interviewerCol {
@@ -16,8 +17,36 @@
 .interviewerBtn {
     height:50px;
     width: 70%;
+    border-radius: 8px;
+    background-color: #535354;
+    display: inline-block;
+    color: whitesmoke;
+    cursor: pointer;
 }
 
-.interviewerContBtn {
-    padding-left: 20%;
+.topBar {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    background-color: #535354;
+    height: 80px;
+    border-bottom: solid 2px black;
+}
+
+.interviewerBody {
+    margin-top: 2%;
+}
+
+#interviewerContBtn {
+    display: inline-block;
+    width: 15%;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #535354;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+body {
+    background-color: #f0ead6;
 }

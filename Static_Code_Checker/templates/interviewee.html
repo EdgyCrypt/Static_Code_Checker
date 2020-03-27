@@ -18,18 +18,21 @@
         <input id="intervieweeCodeFile" type="file" style="display:none;" />
 
         <div class="center">
-            <h1 id="interviewerHeader">Interviewee</h1>
-            <hr />
+            <div class="topBar">
+                <h1 id="intervieweeHeader">Interviewee</h1>
+            </div>
         </div>
         <div class="center">
-            <div class="intervieweeCol">
-                <button id="intervieweeCodeBtn" class="intervieweeBtn" onclick="document.getElementById('intervieweeCodeFile').click();">Code</button>
-            </div>
-            <div>
-                <textarea id="intervieweeTextArea" class="intervieweeText" rows="20" cols="220"></textarea>
-            </div>
-            <div>
-                <button id="intervieweeRunBtn" onclick="">Run</button>
+            <div class="intervieweeBody">
+                <div class="intervieweeCol">
+                    <button id="intervieweeCodeBtn" class="intervieweeBtn" onclick="document.getElementById('intervieweeCodeFile').click();">Code</button>
+                </div>
+                <div>
+                    <textarea id="intervieweeTextArea" class="intervieweeText" rows="20" cols="220"></textarea>
+                </div>
+                <div>
+                    <button id="intervieweeRunBtn" onclick="">Run</button>
+                </div>
             </div>
         </div>
     </div>
