@@ -7,6 +7,8 @@ from flask import Flask, render_template, flash, redirect, session, url_for, req
 from flask_assets import Environment, Bundle
 from flask_bootstrap import Bootstrap
 
+from tkinter import filedialog 
+
 try:
     from compiler import run_code # (program, in_file, out_file)
 except:
@@ -82,7 +84,13 @@ def interviewee():
 """
 Adding the POST Functions
 """
-
+# Adds the ability to read in file using TK instead of JS
+#       this enables us to read files as file paths and not as JS file objects
+@app.route('/file')
+def file(){
+    select = filedialog()
+    return select
+}
 # main driver function 
 if __name__ == '__main__': 
     app.run(debug=True) # change this flag when moving into production
