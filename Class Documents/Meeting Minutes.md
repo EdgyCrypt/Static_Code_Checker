@@ -28,3 +28,23 @@
 - CleanUp
     - We needed to clean up the dev environment better sort some things so on and so forth
         - Matt, Jake, and Will did this is in a live share session
+
+
+
+## 3/29/2020
+
+- Meeting is called into order
+- Discussed what was accomplished
+	- front was priteified
+	- backend was strung together with POST functions
+- Discussed what needed to be worked on
+	- Front End (Will and Nick)
+		- The box that lets them edit code need to be put togehter
+	- Back End (Matt and Jake)
+		- Uploading files didn't work with JS we are trying to find a way to do it pythonically
+- Tools from last time
+	- VS code was used well, it will continue to be used
+	- Git brances turned out to be a little too complicated so we are scaling back
+- Learning
+	- Jake found a great book about flask and jinja 
+	- Matt found a really helpful [youtube playlist](https://www.youtube.com/playlist?list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX) 
