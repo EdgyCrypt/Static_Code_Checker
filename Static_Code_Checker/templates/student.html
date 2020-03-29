@@ -16,10 +16,10 @@
     <div>
         <!--These inputs are hidden from the ui and are used with the buttons to allow for the user to navigate through file explorer for inputs-->
         <form action="{{ url_for('students') }}" method="POST">
-            <input id="studentInputFile" type="file" style="display:none;" name="args"/>
-            <input id="studentOutputFile" type="file" style="display:none;" name="output"/>
-            <input id="studentCodeFile" type="file" onchange="" style="display:none;" name="program"/>
-            
+            <input id="studentInputFile" type="file" style="display:none;" name="args" />
+            <input id="studentOutputFile" type="file" style="display:none;" name="output" />
+            <input id="studentCodeFile" type="file" onchange="populateTetFromFile()" style="display:none;" name="program" />
+
             <div class="center">
                 <div class="topBar">
                     <h1 id="studentHeader">Student</h1>
