@@ -14,6 +14,14 @@ try:
 except:
     from Static_Code_Checker.compiler import run_code
 
+class UserInstance:
+    def __init__(self):
+        self.code_files = ''
+        self.input_file = ''
+        self.output_file = ''
+
+
+user = UserInstance()
 
 app = Flask(__name__) 
 """Your Program Goes Here
