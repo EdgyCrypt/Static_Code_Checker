@@ -19,12 +19,13 @@ class UserInstance:
         self.code_files = ''
         self.input_file = ''
         self.output_file = ''
+        self.landing_page = ''
 
 
 user = UserInstance()
 
 app = Flask(__name__) 
-"""Your Program Goes Here
+"""
 Applying JQuery and Bootstrap
 """
 Bootstrap(app)
