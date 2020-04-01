@@ -6,6 +6,9 @@
     - As of Jan 22 2020 we are still treating Python 3.8 as "unsafe"
 - Pip ("Pip installs Packages / Python")
 
+- For Mac Users (and linux depending on dustributions) only
+    - [Active State TCL](https://www.activestate.com/products/tcl/downloads/) 
+
 ## Getting Pip
 
 ### Windows and MacOS
