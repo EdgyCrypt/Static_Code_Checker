@@ -25,6 +25,7 @@ class UserInstance:
 user = UserInstance()
 
 app = Flask(__name__) 
+
 """
 Applying JQuery and Bootstrap
 """
@@ -52,7 +53,9 @@ assets.register({
 """
 Routing:
 Building the sitemap
+To get the button presses it will have to run back
 """
+# request.args.get('<whatever>') - returns in safe mode ie avoiding not found exceptions
 
 @app.route('/') 
 def index(): 
@@ -60,22 +63,6 @@ def index():
 
 @app.route('/student', methods=['GET', 'POST'])
 def students():
-    print(request.method)
-    if request.method == 'POST':
-        program = request.form['program']   
-        print(request.form)
-        if program:
-            args = request.form['args']
-            output = request.form['output']
-            print(args)
-            print(output)
-            if not args:
-                args = ''
-            
-            if not output:
-                output = ''
-
-            print(run_code(program, args, output))
     return render_template('student.html')
 
 @app.route('/teacher')
@@ -90,15 +77,32 @@ def interviewer():
 def interviewee():
     return render_template('interviewee.html')
 
-"""
-Adding the POST Functions
-"""
-# Adds the ability to read in file using TK instead of JS
-#       this enables us to read files as file paths and not as JS file objects
-@app.route('/file')
-def file():
-    select = filedialog.askopenfilename()
-    return select
+'''
+Non-page routes
+We use these to gather information for compliation
+'''
+
+
+re_routes = {'index': index, 'students': students, 'teacher': teachers, 'interviewer': interviewer, 'interviewee': interviewee}
+
+@app.route('/code_file_select')
+def code_file_select():
+    user.landing_page = request.args.get('page_url')
+    user.code_files = filedialog.askopenfilename()
+    return re_routes[user.landing_page]()
+
+@app.route('/input_file_select')
+def input_file_select():
+    user.landing_page = request.args.get('page_url')
+    user.input_file = filedialog.askopenfilename()
+    return re_routes[user.landing_page]()
+
+@app.route('/output_file_select')
+def output_file_select():
+    user.landing_page = request.args.get('page_url')
+    user.input_file = filedialog.askopenfilename()
+    return re_routes[user.landing_page]()
+    
 
 # main driver function 
 if __name__ == '__main__': 
