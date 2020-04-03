@@ -14,9 +14,19 @@ try:
 except:
     from Static_Code_Checker.compiler import run_code
 
+class UserInstance:
+    def __init__(self):
+        self.code_files = ''
+        self.input_file = ''
+        self.output_file = ''
+        self.landing_page = ''
+
+
+user = UserInstance()
 
 app = Flask(__name__) 
-"""Your Program Goes Here
+
+"""
 Applying JQuery and Bootstrap
 """
 Bootstrap(app)
@@ -43,7 +53,9 @@ assets.register({
 """
 Routing:
 Building the sitemap
+To get the button presses it will have to run back
 """
+# request.args.get('<whatever>') - returns in safe mode ie avoiding not found exceptions
 
 @app.route('/') 
 def index(): 
@@ -51,23 +63,7 @@ def index():
 
 @app.route('/student', methods=['GET', 'POST'])
 def students():
-    print(request.method)
-    if request.method == 'POST':
-        program = request.form['program']   
-        print(request.form)
-        if program:
-            args = request.form['args']
-            output = request.form['output']
-            print(args)
-            print(output)
-            if not args:
-                args = ''
-            
-            if not output:
-                output = ''
-
-            print(run_code(program, args, output))
-    return render_template('student.html')
+    return render_template('student.html', input_file= user.input_file, output_file= user.output_file, code_file= user.code_files)
 
 @app.route('/teacher')
 def teachers():
@@ -81,15 +77,43 @@ def interviewer():
 def interviewee():
     return render_template('interviewee.html')
 
-"""
-Adding the POST Functions
-"""
-# Adds the ability to read in file using TK instead of JS
-#       this enables us to read files as file paths and not as JS file objects
-@app.route('/file')
-def file():
-    select = filedialog.askopenfilename()
-    return select
+'''
+Non-page routes
+We use these to gather information for compliation
+'''
+
+
+re_routes = {'index': index, 'students': students, 'teacher': teachers, 'interviewer': interviewer, 'interviewee': interviewee}
+
+@app.route('/code_file_select' , methods=['POST', 'GET'])
+def code_file_select():
+    user.landing_page = request.args.get('page_url')
+    print(f"from {user.landing_page}")
+    user.code_files = filedialog.askopenfilename()
+    return re_routes[user.landing_page]()
+
+@app.route('/code_dir_select', methods=['POST', 'GET'])
+def code_dir_select():
+    user.landing_page = request.args.get('page_url')
+    print(f"from {user.landing_page}")
+    user.code_files = filedialog.askdirectory()
+    return re_routes[user.landing_page]()
+
+@app.route('/input_file_select', methods=['POST', 'GET'])
+def input_file_select():
+    print("We are in the input file")
+    user.landing_page = request.args.get('page_url')
+    print(f"from {user.landing_page}")
+    user.input_file = filedialog.askopenfilename()
+    redirect('/' + user.landing_page)
+
+@app.route('/output_file_select', methods=['POST', 'GET'])
+def output_file_select():
+    user.landing_page = request.args.get('page_url')
+    print(f"from {user.landing_page}")
+    user.input_file = filedialog.askopenfilename()
+    return re_routes[user.landing_page]()
+    
 
 # main driver function 
 if __name__ == '__main__': 
