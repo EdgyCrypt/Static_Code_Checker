@@ -85,29 +85,29 @@ We use these to gather information for compliation
 
 re_routes = {'index': index, 'students': students, 'teacher': teachers, 'interviewer': interviewer, 'interviewee': interviewee}
 
-@app.route('/code_file_select' , methods=['POST'])
+@app.route('/code_file_select' , methods=['POST', 'GET'])
 def code_file_select():
     user.landing_page = request.args.get('page_url')
     print(f"from {user.landing_page}")
     user.code_files = filedialog.askopenfilename()
     return re_routes[user.landing_page]()
 
-@app.route('/code_dir_select')
+@app.route('/code_dir_select', methods=['POST', 'GET'])
 def code_dir_select():
     user.landing_page = request.args.get('page_url')
     print(f"from {user.landing_page}")
     user.code_files = filedialog.askdirectory()
     return re_routes[user.landing_page]()
 
-@app.route('/input_file_select')
+@app.route('/input_file_select', methods=['POST', 'GET'])
 def input_file_select():
     print("We are in the input file")
     user.landing_page = request.args.get('page_url')
     print(f"from {user.landing_page}")
     user.input_file = filedialog.askopenfilename()
-    return re_routes[user.landing_page]()
+    redirect('/' + user.landing_page)
 
-@app.route('/output_file_select')
+@app.route('/output_file_select', methods=['POST', 'GET'])
 def output_file_select():
     user.landing_page = request.args.get('page_url')
     print(f"from {user.landing_page}")
