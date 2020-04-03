@@ -6,8 +6,8 @@
     - As of Jan 22 2020 we are still treating Python 3.8 as "unsafe"
 - Pip ("Pip installs Packages / Python")
 
-- [Qt](https://www.qt.io/download-qt-installer)
-    - Qt is a graphics driver that we use to generate a file dialogue
+- For Mac Users (and linux depending on dustributions) only
+    - [Active State TCL](https://www.activestate.com/products/tcl/downloads/) 
 
 ## Getting Pip
 
