@@ -16,10 +16,11 @@
     <div>
         <!--These inputs are hidden from the ui and are used with the buttons to allow for the user to navigate through file explorer for inputs-->
         <form action="{{ url_for('students') }}" method="POST">
-            <input id="studentInputFile" type="file" style="display:none;" name="args" />
-            <input id="studentOutputFile" type="file" style="display:none;" name="output" />
-            <input id="studentCodeFile" type="file" onchange="populateTetFromFile()" style="display:none;" name="program" />
-
+            
+            <p>{{ code_file }}</p>
+            <p>{{ input_file }}</p>
+            <p>{{ output_file }}</p>
+            
             <div class="center">
                 <div class="topBar">
                     <h1 id="studentHeader">Student</h1>
@@ -28,16 +29,15 @@
             <div class="center">
                 <div class="studentBody">
                     <div class="studentCol">
-                        <button id="studentInputBtn" class="studentBtn" onclick="document.getElementById('studentInputFile').click();">Input</button>
-                        <p>{{ input_file }}</p>
+                        <form action="{{ url_for('input_file_select') }}" method="POST">
+                            <input id="studentInputBtn" class="studentBtn" type="submit" value="Input">
+                        </form>
                     </div>
                     <div class="studentCol">
                         <button id="studentOutputBtn" class="studentBtn" onclick="document.getElementById('studentOutputFile').click();">Output</button>
-                        <p>{{ output_file }}</p>
                     </div>
                     <div class="studentCol">
                         <button id="studentCodeBtn" class="studentBtn" onclick="document.getElementById('studentCodeFile').click();">Code</button>
-                        <p>{{ code_file }}</p>
                     </div>
                     <div>
                         <textarea id="studentTextArea" class="studentText" rows="20" cols="220">{{ code_contents }}</textarea>

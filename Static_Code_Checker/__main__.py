@@ -63,7 +63,7 @@ def index():
 
 @app.route('/student', methods=['GET', 'POST'])
 def students():
-    return render_template('student.html')
+    return render_template('student.html', input_file= user.input_file, output_file= user.output_file, code_file= user.code_files)
 
 @app.route('/teacher')
 def teachers():
@@ -91,8 +91,15 @@ def code_file_select():
     user.code_files = filedialog.askopenfilename()
     return re_routes[user.landing_page]()
 
+@app.route('/code_dir_select')
+def code_dir_select():
+    user.landing_page = request.args.get('page_url')
+    user.code_files = filedialog.askdirectory()
+    return re_routes[user.landing_page]()
+
 @app.route('/input_file_select')
 def input_file_select():
+    print("We are in the input file")
     user.landing_page = request.args.get('page_url')
     user.input_file = filedialog.askopenfilename()
     return re_routes[user.landing_page]()
