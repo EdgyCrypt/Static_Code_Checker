@@ -65,15 +65,15 @@ def index():
 def students():
     return render_template('student.html', input_file= user.input_file, output_file= user.output_file, code_file= user.code_files)
 
-@app.route('/teacher')
+@app.route('/teacher', methods=['GET', 'POST'])
 def teachers():
     return render_template('teacher.html')
 
-@app.route('/interviewer')
+@app.route('/interviewer', methods=['GET', 'POST'])
 def interviewer():
     return render_template('interviewer.html')
 
-@app.route('/interviewee')
+@app.route('/interviewee', methods=['GET', 'POST'])
 def interviewee():
     return render_template('interviewee.html')
 
@@ -89,14 +89,18 @@ re_routes = {'index': index, 'students': students, 'teacher': teachers, 'intervi
 def code_file_select():
     user.landing_page = request.args.get('page_url')
     print(f"from {user.landing_page}")
-    user.code_files = filedialog.askopenfilename()
+    if user.landing_page != 'teacher':
+        run_code(program='files.py')
+    else:
+        run_code(program='dir.py')
+    
     return re_routes[user.landing_page]()
 
 @app.route('/code_dir_select', methods=['POST', 'GET'])
 def code_dir_select():
     user.landing_page = request.args.get('page_url')
     print(f"from {user.landing_page}")
-    user.code_files = filedialog.askdirectory()
+    run_code(program='files.py')
     return re_routes[user.landing_page]()
 
 @app.route('/input_file_select', methods=['POST', 'GET'])
@@ -104,14 +108,14 @@ def input_file_select():
     print("We are in the input file")
     user.landing_page = request.args.get('page_url')
     print(f"from {user.landing_page}")
-    user.input_file = filedialog.askopenfilename()
+    run_code(program='files.py')
     redirect('/' + user.landing_page)
 
 @app.route('/output_file_select', methods=['POST', 'GET'])
 def output_file_select():
     user.landing_page = request.args.get('page_url')
     print(f"from {user.landing_page}")
-    user.input_file = filedialog.askopenfilename()
+    run_code(program='files.py')
     return re_routes[user.landing_page]()
     
 
