@@ -5,11 +5,18 @@ try:
 except:
     from Static_Code_Checker.comparer import compare
     
-def run_code(program, in_file, out_file):
+def run_code(program, in_file=None, out_file=None):
     for language in code_languages:
         for ext in language['file_extension']:
             if ext in program:
-                return language['function'](program, parseFile(in_file), parseFile(out_file))
+                if in_file and out_file:
+                    return language['function'](program, parseFile(in_file), parseFile(out_file))
+                elif in_file and not out_file:
+                    return language['function'](program, parseFile(in_file), [])
+                elif not in_file and out_file:
+                    return language['function'](program, [], parseFile(out_file))
+                elif not in_file and not out_file:
+                    return language['function'](program, [], [])
     
     return 'No langauge found'
 
@@ -57,16 +64,16 @@ def run_code_java(program, args: list, results: list):
     return trial
 
 def run_code_python(program, args: list, results: list):
-    info = code_languages['python']
-    command = 0
+    info = code_languages[python_loc]
+    command = -1
     trial = []
 
     for i in info['commands']:
-        if subprocess.call([i]) == 0 and command == 0:
+        if subprocess.call([i, 'dummy.py']) == 0 and command == -1:
             command = i
         else:
             continue
-    if not type(program, enumerate):
+    if not isinstance(program, enumerate):
         for arg in args:
             commandLine = [command, program]
 
@@ -90,15 +97,21 @@ def run_code_python(program, args: list, results: list):
                 if output != '':
                     trial.append(compare(output, results[i]))
 
-code_languages = {
-    'java': {
+code_languages = [
+    {
+        # Java
         'file_extension': ['.java', '.class'],
         'commands': ['javac', 'java'],
         'function': run_code_java
     },
-    'python' : {
+    {
+        # Python
         'file_extension': ['.py', '.pyc'],
         'commands': ['python3', 'python'],
         'function': run_code_python
     }
-}
+]
+
+java_loc = 0
+python_loc = 1
+
