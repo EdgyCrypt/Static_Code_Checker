@@ -1,0 +1,19 @@
+@app.route('/code_file_select_student' , methods=['POST', 'GET'])
+    def code_file_select():
+        user.code = read_file()
+        return students()
+
+    @app.route('/code_dir_select_student', methods=['POST', 'GET'])
+    def code_dir_select_student():
+        user.code = read_file()
+        return students()
+
+    @app.route('/input_file_select_student', methods=['POST', 'GET'])
+    def input_file_selects():
+        user.input_file = read_file()
+        return students()
+
+    @app.route('/output_file_select_student', methods=['POST', 'GET'])
+    def output_file_select():
+        user.output_file = read_file()
+        return students()

@@ -69,7 +69,7 @@ def run_code_python(program, args: list, results: list):
     trial = []
 
     for i in info['commands']:
-        if subprocess.call([i, 'dummy.py']) == 0 and command == -1:
+        if subprocess.Popen([i, 'dummy.py'], stdout=subprocess.PIPE).communicate()[0] == 0 and command == -1:
             command = i
         else:
             continue

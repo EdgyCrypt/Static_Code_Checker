@@ -3,6 +3,8 @@
 # the correct interpreter is Python 3.7.X 64 bit (./env/bin/python)
 # if that is not an option call jake over
 
+import os
+
 from flask import Flask, render_template, flash, redirect, session, url_for, request, g
 from flask_assets import Environment, Bundle
 from flask_bootstrap import Bootstrap
@@ -19,7 +21,12 @@ class UserInstance:
         self.code_files = ''
         self.input_file = ''
         self.output_file = ''
-        self.landing_page = ''
+    def __repr__(self):
+        return f'''
+        Code file:  {self.code_files}
+        Input file: {self.input_files}
+        Output file: {self.output_file}
+        '''
 
 
 user = UserInstance()
@@ -63,7 +70,7 @@ def index():
 
 @app.route('/student', methods=['GET', 'POST'])
 def students():
-    return render_template('student.html', input_file= user.input_file, output_file= user.output_file, code_file= user.code_files)
+    return render_template('student.html')
 
 @app.route('/teacher', methods=['GET', 'POST'])
 def teachers():
@@ -79,45 +86,113 @@ def interviewee():
 
 '''
 Non-page routes
-We use these to gather information for compliation
+We use these to gather information for compilation
 '''
+# students
+@app.route('/code_file_select_student' , methods=['POST', 'GET'])
+def code_file_select_student():
+    user.code = read_file()
+    return students()
+
+@app.route('/code_dir_select_student', methods=['POST', 'GET'])
+def code_dir_select_student_student():
+    user.code = read_file()
+    return students()
+
+@app.route('/input_file_select_student', methods=['POST', 'GET'])
+def input_file_select_student():
+    user.input_file = read_file()
+    return students()
+
+@app.route('/output_file_select_student', methods=['POST', 'GET'])
+def output_file_select_student():
+    user.output_file = read_file()
+    return students()
 
 
-re_routes = {'index': index, 'students': students, 'teacher': teachers, 'interviewer': interviewer, 'interviewee': interviewee}
+# teachers
+@app.route('/code_file_select_teacher' , methods=['POST', 'GET'])
+def code_file_select_teacher():
+    user.code = read_file()
+    return teachers()
 
-@app.route('/code_file_select' , methods=['POST', 'GET'])
-def code_file_select():
-    user.landing_page = request.args.get('page_url')
-    print(f"from {user.landing_page}")
-    if user.landing_page != 'teacher':
-        run_code(program='files.py')
-    else:
-        run_code(program='dir.py')
+@app.route('/code_dir_select_teacher', methods=['POST', 'GET'])
+def code_dir_select_teacher_teacher():
+    user.code = read_file()
+    return teachers()
+
+@app.route('/input_file_select_teacher', methods=['POST', 'GET'])
+def input_file_select_teacher():
+    user.input_file = read_file()
+    return teachers()
+
+@app.route('/output_file_select_teacher', methods=['POST', 'GET'])
+def output_file_select_teacher():
+    user.output_file = read_file()
+    return teachers()
+
+# interviewer
+@app.route('/code_file_select_interviewer' , methods=['POST', 'GET'])
+def code_file_select_interviewer():
+    user.code = read_file()
+    return interviewer()
+
+@app.route('/code_dir_select_interviewer', methods=['POST', 'GET'])
+def code_dir_select_interviewer_interviewer():
+    user.code = read_file()
+    return interviewer()
+
+@app.route('/input_file_select_interviewer', methods=['POST', 'GET'])
+def input_file_select_interviewer():
+    user.input_file = read_file()
+    return interviewer()
+
+@app.route('/output_file_select_interviewer', methods=['POST', 'GET'])
+def output_file_select_interviewer():
+    user.output_file = read_file()
+    return interviewer()
+
+# intervieee
+@app.route('/code_file_select_interviewees' , methods=['POST', 'GET'])
+def code_file_select_interviewees():
+    user.code = read_file()
+    return interviewee()
+
+@app.route('/code_dir_select_interviewees', methods=['POST', 'GET'])
+def code_dir_select_interviewees_interviewees():
+    user.code = read_file()
+    return interviewee()
+
+@app.route('/input_file_select_interviewees', methods=['POST', 'GET'])
+def input_file_select_interviewees():
+    user.input_file = read_file()
+    return interviewee()
+
+@app.route('/output_file_select_interviewees', methods=['POST', 'GET'])
+def output_file_select_interviewees():
+    user.output_file = read_file()
+    return interviewee()
+
+def read_file():
+    with open('file.py', 'w+') as f:
+        f.write('''
+        from tkinter import filedialog as fd
+        file = filedialog.askopenfilename()
+        with open('_file_saver.mbnhwfjg', 'w+') as f:
+            f.write(file)
+        ''')
+
+    run_code(program='file.py')
+    filepath = open('_file_saver.mbnhwfjg', 'r').readline()
+
+    tempFiles = ['_file_saver.mbnhwfjg', 'file.py']
+    for i in tempFiles:
+        os.remove(i)
     
-    return re_routes[user.landing_page]()
+    return filepath
 
-@app.route('/code_dir_select', methods=['POST', 'GET'])
-def code_dir_select():
-    user.landing_page = request.args.get('page_url')
-    print(f"from {user.landing_page}")
-    run_code(program='files.py')
-    return re_routes[user.landing_page]()
 
-@app.route('/input_file_select', methods=['POST', 'GET'])
-def input_file_select():
-    print("We are in the input file")
-    user.landing_page = request.args.get('page_url')
-    print(f"from {user.landing_page}")
-    run_code(program='files.py')
-    redirect('/' + user.landing_page)
 
-@app.route('/output_file_select', methods=['POST', 'GET'])
-def output_file_select():
-    user.landing_page = request.args.get('page_url')
-    print(f"from {user.landing_page}")
-    run_code(program='files.py')
-    return re_routes[user.landing_page]()
-    
 
 # main driver function 
 if __name__ == '__main__': 

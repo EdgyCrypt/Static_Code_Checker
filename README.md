@@ -13,6 +13,8 @@
     - [Active State TCL](https://www.activestate.com/products/tcl/downloads/) 
         - To run without making configs changes you will also have to run the install script as root
             - you may also have to update the $PATH in your .bashrc file
+    - You could also get the package from your disto's repos 
+        - [AUR](https://www.archlinux.org/packages/extra/x86_64/tk/)
 
 ## Getting Pip
 
