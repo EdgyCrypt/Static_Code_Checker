@@ -28,7 +28,7 @@
     text-align: center;
     width: 100%;
     display: inline-block;
-    background-color: #535354;
+    background-color: #AA0D36;
     height: 80px;
     border-bottom: solid 2px black;
 }
@@ -52,5 +52,5 @@
 }
 
 body {
-    background-color: #f0ead6;
+    background-color: #badce6;
 }

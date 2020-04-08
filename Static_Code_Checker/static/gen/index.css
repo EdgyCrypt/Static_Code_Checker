@@ -40,7 +40,7 @@ button {
     height: 50px;
     width:80%;
     border-radius: 8px;
-    background-color: #f0ead6;
+    background-color: #ffffff;
     display: inline-block;
 }
 
@@ -76,13 +76,14 @@ button {
     border: solid 4px black;
     border-radius: 4px;
     vertical-align: top;
+    background: #ffffff;
 }
 
 .topBar {
     text-align: center;
     width: 100%;
     display: inline-block;
-    background-color: #535354;
+    background-color: #AA0D36;
     height: 80px;
     border-bottom: solid 2px black;
 }
@@ -93,5 +94,13 @@ button {
 
 
 body {
-    background-color: #f0ead6;
+    background-color: #badce6;
+}
+
+.mainBox {
+
+}
+
+#btnHeader { 
+
 }
