@@ -45,15 +45,15 @@ Staticing the css and JS
 
 assets.register({
     'index_js' : Bundle('js/home.js', output='gen/index.js'),
-    'index_css' : Bundle('css/main.css',  output='gen/index.css'),
+    'index_css' : Bundle('css/main.css', 'css/animate.css',  output='gen/index.css'),
     'student_js': Bundle('js/student.js',  output = 'gen/student.js'),
-    'student_css': Bundle('css/student.css',  output = 'gen/student.css'),
+    'student_css': Bundle('css/student.css',  'css/animate.css', output = 'gen/student.css'),
     'teacher_js': Bundle('js/teacher.js',  output = 'gen/teacher.js'),
-    'teacher_css': Bundle('css/teacher.css',  output = 'gen/teacher.css'),
+    'teacher_css': Bundle('css/teacher.css',  'css/animate.css', output = 'gen/teacher.css'),
     'interviewer_js': Bundle('js/interviewer.js',  output = 'gen/interviewer.js'),
-    'interviewer_css': Bundle('css/interviewer.css',  output = 'gen/interviewer.css'),
+    'interviewer_css': Bundle('css/interviewer.css', 'css/animate.css',  output = 'gen/interviewer.css'),
     'interviewee_js': Bundle('js/interviewee.js',  output = 'gen/interviewee.js'),
-    'interviewee_css': Bundle('css/interviewee.css',  output = 'gen/interviewee.css'),
+    'interviewee_css': Bundle('css/interviewee.css', 'css/animate.css',  output = 'gen/interviewee.css'),
 })
 
 
@@ -175,17 +175,12 @@ def output_file_select_interviewees():
 
 def read_file():
     with open('file.py', 'w+') as f:
-        f.write('''
-        from tkinter import filedialog as fd
-        file = filedialog.askopenfilename()
-        with open('_file_saver.mbnhwfjg', 'w+') as f:
-            f.write(file)
-        ''')
+        f.write("from tkinter import filedialog as fd\nfile = filedialog.askopenfilename()\nwith open('_file_saver.mbnhwfjg', 'w+') as f:\nf.write(file)")
 
     run_code(program='file.py')
     filepath = open('_file_saver.mbnhwfjg', 'r').readline()
 
-    tempFiles = ['_file_saver.mbnhwfjg', 'file.py']
+    tempFiles = ['_file_saver.mbnhwfjg', 'file.py', 'dummy.py']
     for i in tempFiles:
         os.remove(i)
     
