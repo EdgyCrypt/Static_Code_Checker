@@ -27,10 +27,14 @@
         <div class="center">
             <div class="interviewerBody">
                 <div class="interviewerCol">
-                    <button id="interviewerInputBtn" class="interviewerBtn" onclick="document.getElementById('interviewerInputFile').click();">Input</button>
+                    <form action="{{ url_for('input_file_select_interviewer') }}" method="POST">
+                        <input id="interviewerInputBtn" class="interviewerBtn" type="submit" value="Output">
+                    </form>
                 </div>
                 <div class="interviewerCol">
-                    <button id="interviewerOutputBtn" class="interviewerBtn" onclick="document.getElementById('interviewerOutputFile').click();">Output</button>
+                    <form action="{{ url_for('output_file_select_interviewer') }}" method="POST">
+                        <input id="interviewerOutputBtn" class="interviewerBtn" type="submit" value="Output">
+                    </form>
                 </div>
                 <div style="margin-top: 2%;">
                     <button id="interviewerContBtn" onclick="goToInterviewee()">Continue</button>

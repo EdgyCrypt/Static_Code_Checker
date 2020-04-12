@@ -30,16 +30,32 @@
                 <h1 id="teacherHeader">Teacher</h1>
             </div>
         </div>
+
+        <!--
+            This is the template
+            We have to match it back to a python function it will look like bellow
+            the options are: url_for() with the args: code_file_select, input_file_select, output_file_select,
+            each followed with _<page>: student, teacher, interviewer, interviewee 
+        -->
+
         <div class="center">
             <div class="teacherBody">
                 <div class="teacherCol">
-                    <button id="teacherInputBtn" class="teacherBtn" onclick="document.getElementById('teacherInputFile').click();">Input</button>
+                    <form action="{{ url_for('input_file_select_teacher') }}" method="POST">
+                        <input id="teacherInputBtn" class="teacherBtn" type="submit" value="Input">
+                    </form>
                 </div>
                 <div class="teacherCol">
-                    <button id="teacherOutputBtn" class="teacherBtn" onclick="document.getElementById('teacherOutputFile').click();">Output</button>
+                    <form action="{{ url_for('output_file_select_teacher') }}" method="POST">
+                        <input id="teacherInputBtn" class="teacherBtn" type="submit" value="Output">
+                    </form>
+
                 </div>
                 <div class="teacherCol">
-                    <button id="teacherCodeBtn" class="teacherBtn" onclick="document.getElementById('teacherCodeFile').click();">Code</button>
+                    <form action="{{ url_for('code_file_select_teacher') }}" method="POST">
+                        <input id="teacherInputBtn" class="teacherBtn" type="submit" value="Code">
+                    </form>
+
                 </div>
                 <div>
                     <textarea id="teacherTextArea" class="teacherText" rows="20" cols="220"></textarea>
