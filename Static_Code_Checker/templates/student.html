@@ -37,10 +37,14 @@
                     </form>
                 </div>
                 <div class="studentCol">
-                    <button id="studentOutputBtn" class="studentBtn" onclick="document.getElementById('studentOutputFile').click();">Output</button>
+                    <form action="{{ url_for('output_file_select_student') }}" method="POST">
+                        <input id="studentOutputBtn" class="studentBtn" type="submit" value="Input">
+                    </form>
                 </div>
                 <div class="studentCol">
-                    <button id="studentCodeBtn" class="studentBtn" onclick="document.getElementById('studentCodeFile').click();">Code</button>
+                    <form action="{{ url_for('code_file_select_student') }}" method="POST">
+                        <input id="studentOutputBtn" class="studentBtn" type="submit" value="Input">
+                    </form>
                 </div>
                 <div>
                     <textarea id="studentTextArea" class="studentText" rows="20" cols="220">{{ code_contents }}</textarea>

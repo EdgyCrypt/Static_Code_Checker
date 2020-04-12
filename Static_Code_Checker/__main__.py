@@ -175,8 +175,8 @@ def output_file_select_interviewees():
 
 def read_file():
     with open('file.py', 'w+') as f:
-        f.write("from tkinter import filedialog as fd\nfile = filedialog.askopenfilename()\nwith open('_file_saver.mbnhwfjg', 'w+') as f:\nf.write(file)")
-
+        f.write("from tkinter import filedialog as fd\nfile = filedialog.askopenfilename()\nwith open('_file_saver.mbnhwfjg', 'w+') as f:\n\tf.write(file)")
+    
     run_code(program='file.py')
     filepath = open('_file_saver.mbnhwfjg', 'r').readline()
 
@@ -185,8 +185,6 @@ def read_file():
         os.remove(i)
     
     return filepath
-
-
 
 
 # main driver function 

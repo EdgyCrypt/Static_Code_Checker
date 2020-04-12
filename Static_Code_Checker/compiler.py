@@ -1,5 +1,7 @@
 from os import system
 import subprocess
+import os
+
 try:
     from comparer import compare
 except:
@@ -64,27 +66,29 @@ def run_code_java(program, args: list, results: list):
     return trial
 
 def run_code_python(program, args: list, results: list):
+
+
+    with open('dummy.py', "w+") as f:
+        f.write("print(0)")
+
     info = code_languages[python_loc]
     command = -1
     trial = []
 
     for i in info['commands']:
-        if subprocess.Popen([i, 'dummy.py'], stdout=subprocess.PIPE).communicate()[0] == 0 and command == -1:
-            command = i
-        else:
-            continue
-    if not isinstance(program, enumerate):
-        for arg in args:
-            commandLine = [command, program]
-
-            for arg in args[i]:
-                commandLine.append(arg)
-
-            output = subprocess.Popen(commandLine, stdout=subprocess.PIPE).communicate()[0]
         
-            trial.append(compare(output, results[i]))
-    
-    else:
+        try:
+            dummy_run = subprocess.Popen([i, 'dummy.py'], stdout=subprocess.PIPE).communicate()[0]
+            print(dummy_run)
+            if  dummy_run == b'0\n' and command is -1:
+                command = i
+                break
+            else:
+                continue
+        except :
+            None
+
+    if isinstance(program, list):
         for script in program:
             for arg in args:
                 commandLine = [command, script]
@@ -96,6 +100,22 @@ def run_code_python(program, args: list, results: list):
                 
                 if output != '':
                     trial.append(compare(output, results[i]))
+    
+    else:
+        
+        for arg in args:
+            commandLine = [command, program]
+
+            for arg in args[i]:
+                commandLine.append(arg)
+
+            output = subprocess.Popen(commandLine, stdout=subprocess.PIPE).communicate()[0]
+            input(output)
+            trial.append(compare(output, results[i]))
+
+    remove = ['dummy.py']
+    for i in remove:
+        os.remove(i)        
 
 code_languages = [
     {
