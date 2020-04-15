@@ -50,6 +50,7 @@ def run_code_java(program, args: list, results: list):
                 once = False
         
     else:
+    	system(code_languages['java']['commands'][0] + ' ' + program) # javac's the file
         program_class = program.split('.')[0] + '.class'
 
     trial = []
