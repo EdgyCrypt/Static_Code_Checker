@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Static Code Checker</title>
+    <script type="text/javascript" src="interviewee.js"></script>
+    <link rel="stylesheet" type="text/css" href="interviewee.css" />
+</head>
+
+<body>
+    <div>
+        <!--These inputs are hidden from the ui and are used with the buttons to allow for the user to navigate through file explorer for inputs-->
+        <input id="intervieweeCodeFile" type="file" style="display:none;" />
+
+        <div class="center">
+            <div class="topBar">
+                <h1 id="intervieweeHeader">Interviewee</h1>
+            </div>
+        </div>
+        <div class="center">
+            <div class="intervieweeBody">
+                <div class="intervieweeCol">
+                    <form action="{{ url_for('code_file_select_interviewees') }}" method="POST">
+                        <input id="intervieweeCodeBtn" class="intervieweeBtn" type="submit" value="Code">
+                    </form>
+                </div>
+                <div>
+                    <textarea id="intervieweeTextArea" class="intervieweeText" rows="20" cols="220"></textarea>
+                </div>
+                <div>
+                    <button id="intervieweeRunBtn" onclick="">Run</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
