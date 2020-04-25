@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Static Code Checker</title>
+
+    <script type="text/javascript" src="student.js"></script>
+    <link rel="stylesheet" type="text/css" href="student.css" />
+</head>
+
+<body>
+    <div>
+
+        <div class="center">
+            <div class="topBar">
+                <h1 id="studentHeader">Student</h1>
+            </div>
+        </div>
+        <div class="center">
+            <div class="studentBody">
+                <div class="studentCol">
+                    <!--
+                    This is the template
+                    We have to match it back to a python function it will look like bellow
+                    the options are: url_for() with the args: code_file_select, input_file_select, output_file_select,
+                    each followed with _<page>: student, teacher, interviewer, interviewee 
+                    -->
+                    <form action="{{ url_for('input_file_select_student') }}" method="POST">
+                        <!--
+                            You can literally copy and paste this into the other 
+                        -->
+                        <input id="studentInputBtn" class="studentBtn" type="submit" value="Input">
+                    </form>
+                </div>
+                <div class="studentCol">
+                    <form action="{{ url_for('output_file_select_student') }}" method="POST">
+                        <input id="studentOutputBtn" class="studentBtn" type="submit" value="Output">
+                    </form>
+                </div>
+                <div class="studentCol">
+                    <form action="{{ url_for('code_file_select_student') }}" method="POST">
+                        <input id="studentOutputBtn" class="studentBtn" type="submit" value="Code">
+                    </form>
+                </div>
+                <div>
+                    <textarea id="studentTextArea" class="studentText" rows="20" cols="220">{{ code_contents }}</textarea>
+                </div>
+                <div>
+                    <input id="studentRunBtn" type="submit" value="Run">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
