@@ -1,17 +1,16 @@
-# getting errors?
-# hit (Ctrl+Shift+P).and type Python: Select Interpreter
-# the correct interpreter is Python 3.7.X 64 bit (./env/bin/python)
-# if that is not an option call jake over
-
+# Standard Library Imports
 import os
 import subprocess
+import webbrowser
+import sys
 
+# Flask 
 from flask import Flask, render_template, flash, redirect, session, url_for, request, g
 from flask_assets import Environment, Bundle
 from flask_bootstrap import Bootstrap
 
+# Other third party
 from tkinter import filedialog
-import webbrowser
 
 class UserInstance:
     def __init__(self):
@@ -53,6 +52,37 @@ assets.register({
     'interviewee_css': Bundle('css/interviewee.css', 'css/animate.css',  output = 'gen/interviewee.css'),
 })
 
+"""
+file finding functions
+"""
+def read_file():
+    with open('file.py', 'w+') as f:
+        f.write("from tkinter import Tk\nfrom tkinter.filedialog import askopenfilename\nroot = Tk()\nfile = askopenfilename()\nroot.destroy()\nwith open('_file_saver.mbnhwfjg', 'w+') as f:\n\tf.write(file)\ninput()")
+    
+    os.system(find_python_command() + ' file.py')
+    
+    with open('_file_saver.mbnhwfjg', 'r') as f:
+        filepath = f.readline()
+    
+    tempFiles = ['_file_saver.mbnhwfjg', 'file.py']
+    for i in tempFiles:
+        os.remove(i)
+    
+    return filepath
+
+def find_python_command():
+    possible_commands = ['python', 'python3', 'py', 'py3']
+    for command in possible_commands:
+        line = [command, '--version']
+        
+        try:
+            output = subprocess.Popen(line, stdout=subprocess.PIPE).communicate()[0]
+        except:
+            continue
+
+        if '3' in output.decode("utf-8"):
+            return command
+
 
 """
 Routing:
@@ -90,118 +120,89 @@ We use these to gather information for compilation
 @app.route('/code_file_select_student' , methods=['POST', 'GET'])
 def code_file_select_student():
     user.code = read_file()
-    return students()
+    return redirect(url_for('student'))
 
 @app.route('/code_dir_select_student', methods=['POST', 'GET'])
 def code_dir_select_student_student():
     user.code = read_file()
-    return students()
+    return redirect(url_for('student'))
 
 @app.route('/input_file_select_student', methods=['POST', 'GET'])
 def input_file_select_student():
     user.input_file = read_file()
-    return students()
+    return redirect(url_for('student'))
 
 @app.route('/output_file_select_student', methods=['POST', 'GET'])
 def output_file_select_student():
     user.output_file = read_file()
-    return students()
+    return redirect(url_for('student'))
 
 
 # teachers
 @app.route('/code_file_select_teacher' , methods=['POST', 'GET'])
 def code_file_select_teacher():
     user.code = read_file()
-    return teachers()
+    return redirect(url_for('teachers'))
 
 @app.route('/code_dir_select_teacher', methods=['POST', 'GET'])
 def code_dir_select_teacher_teacher():
     user.code = read_file()
-    return teachers()
+    return redirect(url_for('teachers'))
 
 @app.route('/input_file_select_teacher', methods=['POST', 'GET'])
 def input_file_select_teacher():
     user.input_file = read_file()
-    return teachers()
+    return redirect(url_for('teachers'))
 
 @app.route('/output_file_select_teacher', methods=['POST', 'GET'])
 def output_file_select_teacher():
     user.output_file = read_file()
-    return teachers()
+    return redirect(url_for('teachers'))
 
 # interviewer
 @app.route('/code_file_select_interviewer' , methods=['POST', 'GET'])
 def code_file_select_interviewer():
     user.code = read_file()
-    return interviewer()
+    return redirect(url_for('interviewer'))
 
 @app.route('/code_dir_select_interviewer', methods=['POST', 'GET'])
 def code_dir_select_interviewer_interviewer():
     user.code = read_file()
-    return interviewer()
+    return redirect(url_for('interviewer'))
 
 @app.route('/input_file_select_interviewer', methods=['POST', 'GET'])
 def input_file_select_interviewer():
     user.input_file = read_file()
-    return interviewer()
+    return redirect(url_for('interviewer'))
 
 @app.route('/output_file_select_interviewer', methods=['POST', 'GET'])
 def output_file_select_interviewer():
     user.output_file = read_file()
-    return interviewer()
+    return redirect(url_for('interviewer'))
 
 # intervieee
 @app.route('/code_file_select_interviewees' , methods=['POST', 'GET'])
 def code_file_select_interviewees():
     user.code = read_file()
-    return interviewee()
+    return redirect(url_for('interviewee'))
 
 @app.route('/code_dir_select_interviewees', methods=['POST', 'GET'])
 def code_dir_select_interviewees_interviewees():
     user.code = read_file()
-    return interviewee()
+    return redirect(url_for('interviewee'))
 
 @app.route('/input_file_select_interviewees', methods=['POST', 'GET'])
 def input_file_select_interviewees():
     user.input_file = read_file()
-    return interviewee()
+    return redirect(url_for('interviewee'))
 
 @app.route('/output_file_select_interviewees', methods=['POST', 'GET'])
 def output_file_select_interviewees():
     user.output_file = read_file()
-    return interviewee()
-
-def read_file():
-    with open('file.py', 'w+') as f:
-        f.write("from tkinter import filedialog\nfile = filedialog.askopenfilename()\nwith open('_file_saver.mbnhwfjg', 'w+') as f:\n\tf.write(file)\ninput()")
-    
-    os.system(find_python_command() + ' file.py')
-    
-    with open('_file_saver.mbnhwfjg', 'r') as f:
-        filepath = f.readline()
-    
-    # tempFiles = ['_file_saver.mbnhwfjg', 'file.py']
-    # for i in tempFiles:
-    #     os.remove(i)
-    
-    return filepath
-
-def find_python_command():
-    ssible_commands = ['python', 'python3', 'py', 'py3']
-    for command in ssible_commands:
-        line = [command, '--version']
-        
-        try:
-            output = subprocess.Popen(line, stdout=subprocess.PIPE).communicate()[0]
-        except:
-            continue
-
-        if '3' in output.decode("utf-8"):
-            return command
-        
+    return redirect(url_for('interviewee'))
 
 # main driver function 
 if __name__ == '__main__':
-    webbrowser.open(f'http://127.0.0.1:5000/') #Auto opens up browser
+    webbrowser.open('http://127.0.0.1:5000/') #Auto opens up browser
     app.run(debug=True) # change this flag when moving into production
     
