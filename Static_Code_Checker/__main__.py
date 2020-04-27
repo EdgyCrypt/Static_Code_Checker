@@ -4,17 +4,14 @@
 # if that is not an option call jake over
 
 import os
+import subprocess
 
 from flask import Flask, render_template, flash, redirect, session, url_for, request, g
 from flask_assets import Environment, Bundle
 from flask_bootstrap import Bootstrap
 
 from tkinter import filedialog
-
-try:
-    from compiler import run_code # (program, in_file, out_file)
-except:
-    from Static_Code_Checker.compiler import run_code
+import webbrowser
 
 class UserInstance:
     def __init__(self):
@@ -83,6 +80,7 @@ def interviewer():
 @app.route('/interviewee', methods=['GET', 'POST'])
 def interviewee():
     return render_template('interviewee.html')
+
 
 '''
 Non-page routes
@@ -175,19 +173,35 @@ def output_file_select_interviewees():
 
 def read_file():
     with open('file.py', 'w+') as f:
-        f.write("from tkinter import filedialog as fd\nfile = filedialog.askopenfilename()\nwith open('_file_saver.mbnhwfjg', 'w+') as f:\n\tf.write(file)")
+        f.write("from tkinter import filedialog\nfile = filedialog.askopenfilename()\nwith open('_file_saver.mbnhwfjg', 'w+') as f:\n\tf.write(file)\ninput()")
     
-    run_code(program='file.py')
-    filepath = open('_file_saver.mbnhwfjg', 'r').readline()
-
-    tempFiles = ['_file_saver.mbnhwfjg', 'file.py', 'dummy.py']
-    for i in tempFiles:
-        os.remove(i)
+    os.system(find_python_command() + ' file.py')
+    
+    with open('_file_saver.mbnhwfjg', 'r') as f:
+        filepath = f.readline()
+    
+    # tempFiles = ['_file_saver.mbnhwfjg', 'file.py']
+    # for i in tempFiles:
+    #     os.remove(i)
     
     return filepath
 
+def find_python_command():
+    ssible_commands = ['python', 'python3', 'py', 'py3']
+    for command in ssible_commands:
+        line = [command, '--version']
+        
+        try:
+            output = subprocess.Popen(line, stdout=subprocess.PIPE).communicate()[0]
+        except:
+            continue
+
+        if '3' in output.decode("utf-8"):
+            return command
+        
 
 # main driver function 
-if __name__ == '__main__': 
+if __name__ == '__main__':
+    webbrowser.open(f'http://127.0.0.1:5000/') #Auto opens up browser
     app.run(debug=True) # change this flag when moving into production
     

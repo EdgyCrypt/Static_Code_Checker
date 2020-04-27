@@ -44,13 +44,15 @@ def run_code_java(program, args: list, results: list):
         program_class = ''
         once = True
         for i in program:
-            system(code_languages['java']['commands'][0] + ' ' + i) # javac's the file
+            exec_bit = code_languages['java']['commands'][0] + ' ' + i
+            system(exec_bit)
             if 'driver' in i.lower() and once:
                 program_class = i.split('.')[0] + '.class'
                 once = False
         
     else:
-    	system(code_languages['java']['commands'][0] + ' ' + program) # javac's the file
+        exec_bit = code_languages['java']['commands'][0] + ' ' + program
+    	system(exec_bit)
         program_class = program.split('.')[0] + '.class'
 
     trial = []
