@@ -9,6 +9,11 @@
     display: inline-block;
 }
 
+#homeButton:hover {
+    cursor: pointer;
+}
+
+
 button {
     position: relative;
     display:block;

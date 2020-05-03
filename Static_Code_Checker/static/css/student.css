@@ -24,6 +24,16 @@
     cursor: pointer;
 }
 
+#homeButton {
+    float: left;
+    margin-top: -40px;
+    margin-left: 15px;
+}
+
+#homeButton:hover {
+    cursor: pointer;
+}
+
 .topBar {
     text-align: center;
     width: 100%;

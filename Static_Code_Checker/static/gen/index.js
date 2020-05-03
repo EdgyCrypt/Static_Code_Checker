@@ -1,4 +1,4 @@
- function navigatePages(int) {
+function navigatePages(int) {
 
     if(int == 1) {
         window.location.href="/student";
@@ -13,6 +13,6 @@
         window.location.href="/interviewee";
     }
     else if (int == 5) {
-        window.location.href="/index";
+        window.location.href="/";
     }
 }
