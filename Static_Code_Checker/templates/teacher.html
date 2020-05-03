@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body class="animated fadeIn">
     <div>
         <!--These inputs are hidden from the ui and are used with the buttons to allow for the user to navigate through file explorer for inputs-->
         <input id="teacherInputFile" type="file" style="display:none;" />
@@ -40,34 +40,36 @@
             the options are: url_for() with the args: code_file_select, input_file_select, output_file_select,
             each followed with _<page>: student, teacher, interviewer, interviewee 
         -->
-
-        <div class="center">
-            <div class="teacherBody">
-                <div class="teacherCol">
-                    <form action="{{ url_for('input_file_select_teacher') }}" method="POST">
-                        <input id="teacherInputBtn" class="teacherBtn" type="submit" value="Input">
-                    </form>
-                </div>
-                <div class="teacherCol">
-                    <form action="{{ url_for('output_file_select_teacher') }}" method="POST">
-                        <input id="teacherInputBtn" class="teacherBtn" type="submit" value="Output">
-                    </form>
-
-                </div>
-                <div class="teacherCol">
-                    <form action="{{ url_for('code_file_select_teacher') }}" method="POST">
-                        <input id="teacherInputBtn" class="teacherBtn" type="submit" value="Code">
-                    </form>
-
-                </div>
-                <div>
-                    <textarea id="teacherTextArea" class="teacherText" rows="20" cols="220"></textarea>
-                </div>
-                <div>
-                    <button id="teacherRunBtn" onclick="">Run</button>
+        <div class="animated lightSpeedIn">
+            <div class="center">
+                <div class="teacherBody">
+                    <div class="teacherCol">
+                        <form action="{{ url_for('input_file_select_teacher') }}" method="POST">
+                            <input id="teacherInputBtn" class="teacherBtn" type="submit" value="Input">
+                        </form>
+                    </div>
+                    <div class="teacherCol">
+                        <form action="{{ url_for('output_file_select_teacher') }}" method="POST">
+                            <input id="teacherInputBtn" class="teacherBtn" type="submit" value="Output">
+                        </form>
+    
+                    </div>
+                    <div class="teacherCol">
+                        <form action="{{ url_for('code_file_select_teacher') }}" method="POST">
+                            <input id="teacherInputBtn" class="teacherBtn" type="submit" value="Code">
+                        </form>
+    
+                    </div>
+                    <div>
+                        <textarea id="teacherTextArea" class="teacherText" rows="20" cols="220"></textarea>
+                    </div>
+                    <div>
+                        <button id="teacherRunBtn" onclick="">Run</button>
+                    </div>
                 </div>
             </div>
         </div>
+        
     </div>
 </body>
 
