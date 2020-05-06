@@ -3,7 +3,7 @@ function goToInterviewee() {
 }
 
 function navigatePages(int) {
-
+//causing page changes
     if(int == 1) {
         window.location.href="/student";
     }

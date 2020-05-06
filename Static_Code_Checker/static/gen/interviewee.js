@@ -1,5 +1,6 @@
 
 function populateTextFromFile () {
+    //was supposed to populate text area with contents of file
     var file = document.getElementById('intervieweeCodeFile').files[0];
 
     var reader = new FileReader();
@@ -11,7 +12,7 @@ function populateTextFromFile () {
 }
 
 function navigatePages(int) {
-
+//causing page changes
     if(int == 1) {
         window.location.href="/student";
     }

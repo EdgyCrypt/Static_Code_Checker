@@ -1,4 +1,5 @@
 function populateTextFromFile() {
+    //was supposed to cause textarea to be populated with contents of code file
     var file = document.getElementById('studentCodeFile').files[0];
 
     file.addEventListener('change', () => {
@@ -13,7 +14,7 @@ function populateTextFromFile() {
 }
 
 function navigatePages(int) {
-
+//causing page changes
     if(int == 1) {
         window.location.href="/student";
     }

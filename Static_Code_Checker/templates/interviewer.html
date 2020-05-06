@@ -20,6 +20,7 @@
         <input id="interviewerCodeFile" type="file" style="display:none;" />
 
         <div class="center">
+            <!--Top Bar-->
             <div class="topBar">
                 <h1 id="interviewerHeader">
                     <div>Interviewer</div>
@@ -27,12 +28,13 @@
                 </h1>
             </div>
         </div>
+        <!--Main page-->
         <div class="animated lightSpeedIn">
             <div class="center">
                 <div class="interviewerBody">
                     <div class="interviewerCol">
                         <form action="{{ url_for('input_file_select_interviewer') }}" method="POST">
-                            <input id="interviewerInputBtn" class="interviewerBtn" type="submit" value="Output">
+                            <input id="interviewerInputBtn" class="interviewerBtn" type="submit" value="Input">
                         </form>
                     </div>
                     <div class="interviewerCol">

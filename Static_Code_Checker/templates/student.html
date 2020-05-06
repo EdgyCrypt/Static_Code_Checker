@@ -16,6 +16,7 @@
     <div>
 
         <div class="center">
+            <!--Top Bar-->
             <div class="topBar">
                 <h1 id="studentHeader">
                     <div>Student</div>
@@ -23,6 +24,7 @@
                 </h1>
             </div>
         </div>
+        <!--Main body-->
         <div class="animated lightSpeedIn">
             <div class="center">
                 <div class="studentBody">
@@ -34,9 +36,6 @@
                         each followed with _<page>: student, teacher, interviewer, interviewee 
                         -->
                         <form action="{{ url_for('input_file_select_student') }}" method="POST">
-                            <!--
-                                You can literally copy and paste this into the other 
-                            -->
                             <input id="studentInputBtn" class="studentBtn" type="submit" value="Input">
                         </form>
                     </div>
@@ -47,7 +46,7 @@
                     </div>
                     <div class="studentCol">
                         <form action="{{ url_for('code_file_select_student') }}" method="POST">
-                            <input id="studentOutputBtn" class="studentBtn" type="submit" value="Code">
+                            <input id="studentCodeBtn" class="studentBtn" type="submit" value="Code">
                         </form>
                     </div>
                     <div>

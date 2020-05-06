@@ -1,7 +1,7 @@
 function navigatePages(int) {
 
+    //causing page changes
     if(int == 1) {
-        $('#mainBody');
         window.location.href="/student";
     }
     else if (int == 2) {
