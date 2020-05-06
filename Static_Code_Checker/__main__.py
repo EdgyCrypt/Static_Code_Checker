@@ -298,7 +298,7 @@ def output_file_select_student():
 
 @app.route('/submit_student')
 def submit_student():
-    print('yeet')
+    return redirect(url_for('students')(run_code(user.code_files, user.input_file, user.output_file)))
 
 
 # teachers
