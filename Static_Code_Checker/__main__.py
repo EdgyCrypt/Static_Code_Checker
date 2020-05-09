@@ -17,6 +17,9 @@ from tkinter import filedialog
 
 
 def run_code(program, in_file=None, out_file=None):
+    """
+    runs a file by locking onto it's extension through the power of Dictonary
+    """
     for language in code_languages:
         for ext in language['file_extension']:
             if ext in program:
@@ -33,6 +36,9 @@ def run_code(program, in_file=None, out_file=None):
 
 
 def parse_file(file):
+    """
+    reads the entire file (or string) and sepearates the arguments by ^^^
+    """
     try:
         file = open(file).readlines()
 
